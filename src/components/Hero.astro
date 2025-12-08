@@ -1,30 +1,22 @@
 ---
 import Button from './Button.astro';
+import BackgroundDecorations from './BackgroundDecorations.astro';
+
+interface Props {
+	// Currently no props required, but interface is here for future extensibility
+}
+
+const {} = Astro.props;
 ---
 
 <section class="hero" id="main-content">
-	<!-- Decorative Background Elements -->
-	<svg class="hero-decoration deco-top-left" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-		<path fill="#DDD6FE" fill-opacity="0.3" d="M47.4,-62.9C59.9,-53.3,67.4,-37.5,71.4,-21.2C75.4,-4.9,75.9,11.9,70.1,26.8C64.3,41.7,52.2,54.7,37.8,63.2C23.4,71.7,6.7,75.7,-9.9,72.3C-26.5,68.9,-43,58.1,-54.9,44.7C-66.8,31.3,-74.1,15.6,-74.8,-0.4C-75.5,-16.4,-69.6,-32.8,-59.4,-44.7C-49.2,-56.6,-34.7,-64,-19.5,-68.8C-4.3,-73.6,11.6,-75.8,24.8,-71.7C38,-67.6,48.5,-57.2,47.4,-62.9Z" transform="translate(100 100)" />
-	</svg>
-
-	<svg class="hero-decoration deco-top-right" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-		<path fill="#F5D0FE" fill-opacity="0.3" d="M38.4,-53.3C48.9,-43.2,56.3,-30.9,61.2,-17.2C66.1,-3.5,68.5,11.6,64.4,24.9C60.3,38.2,49.7,49.7,37.1,57.7C24.5,65.7,10,70.2,-5.2,69.5C-20.4,68.8,-36.5,63,-48.8,52.8C-61.1,42.6,-69.6,28,-72.4,12.3C-75.2,-3.4,-72.3,-20.2,-64.2,-34.5C-56.1,-48.8,-42.8,-60.6,-28,-67.7C-13.2,-74.8,2.1,-77.2,15.7,-72.8C29.3,-68.4,41.2,-57.2,38.4,-53.3Z" transform="translate(100 100)" />
-	</svg>
-
-	<svg class="hero-decoration deco-bottom-left" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-		<path fill="#C4B5FD" fill-opacity="0.3" d="M41.3,-55.8C52.8,-46.3,60.8,-32.9,65.2,-18.2C69.6,-3.5,70.4,12.5,65.6,26.4C60.8,40.3,50.4,52.1,37.5,59.5C24.6,66.9,9.2,69.9,-6.1,68.3C-21.4,66.7,-36.6,60.5,-48.7,50.6C-60.8,40.7,-69.8,27.1,-72.6,12.4C-75.4,-2.3,-72,-18.1,-64.1,-31.3C-56.2,-44.5,-43.8,-55.1,-30.3,-63.5C-16.8,-71.9,-2.2,-78.1,10.9,-75.8C24,-73.5,36.8,-62.7,41.3,-55.8Z" transform="translate(100 100)" />
-	</svg>
-
-	<svg class="hero-decoration deco-bottom-right" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-		<path fill="#E9D5FF" fill-opacity="0.3" d="M43.7,-59.2C55.5,-50.1,63.5,-35.8,67.9,-20.3C72.3,-4.8,73.1,11.9,68.5,26.7C63.9,41.5,54,54.4,41.5,62.7C29,71,14,74.7,-1.8,73.9C-17.6,73.1,-34.4,67.8,-47.3,58.1C-60.2,48.4,-69.2,34.3,-72.6,18.7C-76,-3,-73.8,-26.2,-65.3,-44.9C-56.8,-63.6,-42,-77.8,-25.8,-82.5C-9.6,-87.2,8,-82.4,22.8,-72.9C37.6,-63.4,49.6,-49.2,43.7,-59.2Z" transform="translate(100 100)" />
-	</svg>
+	<BackgroundDecorations />
 
 	<div class="container">
 		<div class="hero-grid">
 			<div class="hero-left">
 				<div class="hero-badge">
-					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 						<polyline points="20 6 9 17 4 12"></polyline>
 					</svg>
 					Free & Open Methodology
@@ -35,7 +27,7 @@ import Button from './Button.astro';
 					<span class="highlight-text">
 						Spec-Driven Development
 						<span class="ghost-container">
-							<svg class="ghost-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class="ghost-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 								<path d="M12 2C8.69 2 6 4.69 6 8V15C6 15.55 6.45 16 7 16C7.55 16 8 15.55 8 15V8C8 5.79 9.79 4 12 4C14.21 4 16 5.79 16 8V15C16 15.55 16.45 16 17 16C17.55 16 18 15.55 18 15V8C18 4.69 15.31 2 12 2Z" fill="currentColor"/>
 								<path d="M18 14V20C18 20.55 17.55 21 17 21C16.45 21 16 21.45 16 22C16 22.55 15.55 23 15 23C14.45 23 14 22.55 14 22C14 21.45 13.55 21 13 21C12.45 21 12 21.45 12 22C12 22.55 11.55 23 11 23C10.45 23 10 22.55 10 22C10 21.45 9.55 21 9 21C8.45 21 8 21.45 8 22C8 22.55 7.55 23 7 23C6.45 23 6 22.55 6 22C6 21.45 5.55 21 5 21C4.45 21 4 20.55 4 20V14C4 13.45 4.45 13 5 13C5.55 13 6 13.45 6 14V15C6 15.55 6.45 16 7 16C7.55 16 8 15.55 8 15V14C8 13.45 8.45 13 9 13C9.55 13 10 13.45 10 14V15C10 15.55 10.45 16 11 16C11.55 16 12 15.55 12 15V14C12 13.45 12.45 13 13 13C13.55 13 14 13.45 14 14V15C14 15.55 14.45 16 15 16C15.55 16 16 15.55 16 15V14C16 13.45 16.45 13 17 13C17.55 13 18 13.45 18 14Z" fill="currentColor"/>
 								<circle cx="9.5" cy="9" r="1.5" fill="#1a1a1a"/>
@@ -51,7 +43,7 @@ import Button from './Button.astro';
 
 				<div class="hero-cta">
 					<a href="/downloads/spec-architect.md" download="spec-architect.md" class="btn btn-primary btn-lg" role="button">
-						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 							<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
 							<polyline points="7 10 12 15 17 10"></polyline>
 							<line x1="12" y1="15" x2="12" y2="3"></line>
@@ -64,7 +56,7 @@ import Button from './Button.astro';
 				</div>
 
 				<div class="hero-note">
-					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 						<circle cx="12" cy="12" r="10"></circle>
 						<path d="M12 16v-4"></path>
 						<path d="M12 8h.01"></path>
@@ -75,9 +67,9 @@ import Button from './Button.astro';
 
 			<div class="hero-right">
 				<div class="workflow-card">
-				<div class="workflow-step">
-					<div class="step-icon requirements">
-						<svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+					<div class="workflow-step">
+						<div class="step-icon requirements">
+						<svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 							<path d="M17.47 3.4502V6.7802H6.54V3.4502H2.75V21.9402H21.25V3.4502H17.47ZM9.17 11.8202L9.62 12.4102L10.89 14.0602L14.99 10.1902L16.02 11.2802L15.47 11.8002L11.31 15.7202L10.71 16.2802L8.44 13.3302L7.98 12.7302L9.17 11.8202Z"/>
 							<path d="M15.97 4.0998V5.2798H8.03003V4.1098H9.55003L9.76003 3.6998L10.59 2.0498H13.43L14.24 3.6798L14.44 4.0798H14.9L15.97 4.0998Z"/>
 						</svg>
@@ -89,14 +81,14 @@ import Button from './Button.astro';
 				</div>
 
 				<div class="workflow-arrow">
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 						<path d="M12 5V19M12 19L19 12M12 19L5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 					</svg>
 				</div>
 
 				<div class="workflow-step">
 					<div class="step-icon design">
-						<svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						<svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 							<path d="M14.8397 8.90027L15.1597 12.1803C17.6797 9.06027 20.4697 4.55027 21.1297 3.44027L20.9797 2.69027L20.2297 2.53027C19.1297 3.20027 14.5597 6.02027 11.4297 8.56027L14.8297 8.89027L14.8397 8.90027Z"/>
 							<path d="M4.12043 14.8699C5.42043 13.5699 7.55043 13.5799 8.87043 14.8999C10.1904 16.2199 10.2004 18.3499 8.90043 19.6499C8.69043 19.8599 8.47043 20.0199 8.24043 20.1599C7.81043 20.4199 7.34043 20.5699 6.85043 20.5999L6.53043 20.6199L2.94043 20.8299L3.15043 17.2599L3.18043 16.8699C3.22043 16.3999 3.37043 15.9399 3.61043 15.5299C3.75043 15.2899 3.91043 15.0799 4.12043 14.8699Z"/>
 							<path d="M13.4602 10.2797L9.89016 9.92969L7.66016 12.5797C7.77016 12.6097 8.73016 12.7197 9.88016 13.8697C10.9002 14.8897 11.0902 15.8197 11.1402 15.9997L13.8002 13.7297L13.4602 10.2697V10.2797Z"/>
@@ -109,14 +101,14 @@ import Button from './Button.astro';
 				</div>
 
 				<div class="workflow-arrow">
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 						<path d="M12 5V19M12 19L19 12M12 19L5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 					</svg>
 				</div>
 
 				<div class="workflow-step">
 					<div class="step-icon tasks">
-						<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 							<path opacity="0.4" d="M15 2H2V22H22V11.98" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="square"/>
 							<path d="M9 11.0002L11.67 13.8802L21 5.24023" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
 						</svg>
@@ -128,14 +120,14 @@ import Button from './Button.astro';
 				</div>
 
 				<div class="workflow-arrow">
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 						<path d="M12 5V19M12 19L19 12M12 19L5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 					</svg>
 				</div>
 
 				<div class="workflow-step">
 					<div class="step-icon build">
-						<svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						<svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 							<path d="M18.3844 5.88828L13.668 1.17188L4.50387 10.336L9.22027 15.0524L18.3844 5.88828Z"/>
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M7.17969 6.93934L12.6804 12.44L11.6197 13.5007L6.11903 8L7.17969 6.93934Z"/>
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M11.3281 2.77918L16.8288 8.27985L15.7681 9.34051L10.2675 3.83984L11.3281 2.77918Z"/>
@@ -179,42 +171,6 @@ import Button from './Button.astro';
 		position: relative;
 		overflow: hidden;
 		border-bottom: var(--border-width) solid var(--color-border);
-	}
-
-	/* Decorative Background Shapes */
-	.hero-decoration {
-		position: absolute;
-		pointer-events: none;
-		z-index: 0;
-		opacity: 1;
-	}
-
-	.deco-top-left {
-		width: 400px;
-		height: 400px;
-		top: -50px;
-		left: -100px;
-	}
-
-	.deco-top-right {
-		width: 450px;
-		height: 450px;
-		top: -80px;
-		right: -120px;
-	}
-
-	.deco-bottom-left {
-		width: 380px;
-		height: 380px;
-		bottom: -100px;
-		left: -80px;
-	}
-
-	.deco-bottom-right {
-		width: 420px;
-		height: 420px;
-		bottom: -120px;
-		right: -100px;
 	}
 
 	.container {
@@ -417,44 +373,6 @@ import Button from './Button.astro';
 		gap: var(--space-4);
 		flex-wrap: wrap;
 		margin-bottom: var(--space-8);
-	}
-
-	.hero-cta .btn {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		gap: var(--space-2);
-		font-weight: 700;
-		border-radius: var(--border-radius);
-		border: var(--border-width) solid var(--color-border);
-		cursor: pointer;
-		transition: all var(--transition-fast);
-		text-decoration: none;
-		font-family: var(--font-sans);
-		white-space: nowrap;
-		position: relative;
-	}
-
-	.hero-cta .btn-primary {
-		background: var(--color-primary);
-		color: white;
-		box-shadow: var(--shadow-brutal-sm);
-		border-color: var(--color-border);
-	}
-
-	.hero-cta .btn-primary:hover {
-		transform: translate(2px, 2px);
-		box-shadow: 4px 4px 0 var(--color-gray-900);
-	}
-
-	.hero-cta .btn-primary:active {
-		transform: translate(4px, 4px);
-		box-shadow: 2px 2px 0 var(--color-gray-900);
-	}
-
-	.hero-cta .btn-lg {
-		padding: var(--space-4) var(--space-8);
-		font-size: var(--text-lg);
 	}
 
 	.hero-note {
