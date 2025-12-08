@@ -4,9 +4,10 @@ interface Props {
 	variant?: 'primary' | 'secondary' | 'outline';
 	size?: 'sm' | 'md' | 'lg';
 	class?: string;
+	download?: string;
 }
 
-const { href, variant = 'primary', size = 'md', class: className = '' } = Astro.props;
+const { href, variant = 'primary', size = 'md', class: className = '', download } = Astro.props;
 const Element = href ? 'a' : 'button';
 ---
 
@@ -14,6 +15,7 @@ const Element = href ? 'a' : 'button';
 	href={href}
 	class:list={['btn', `btn-${variant}`, `btn-${size}`, className]}
 	{...href && { role: 'button' }}
+	{...download && { download }}
 >
 	<slot />
 </Element>
