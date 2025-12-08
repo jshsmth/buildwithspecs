@@ -1,0 +1,91 @@
+---
+// Header Component - Navigation bar
+---
+
+<header class="header">
+	<div class="container">
+		<div class="header-content">
+			<a href="/" class="logo">Build with Spec</a>
+
+			<nav class="nav">
+				<a href="#what-is-sdd" class="nav-link">Overview</a>
+				<a href="#how-to-start" class="nav-link">Guide</a>
+				<a href="#download" class="nav-button">Download</a>
+			</nav>
+		</div>
+	</div>
+</header>
+
+<style>
+	.header {
+		background: var(--color-pastel-purple);
+		border-bottom: var(--border-width) solid var(--color-border);
+		position: sticky;
+		top: 0;
+		z-index: 100;
+	}
+
+	.header-content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: var(--space-4) 0;
+	}
+
+	.logo {
+		font-size: var(--text-xl);
+		font-weight: 900;
+		color: var(--color-gray-900);
+		text-decoration: none;
+		letter-spacing: -0.02em;
+	}
+
+	.logo:hover {
+		color: var(--color-primary);
+	}
+
+	.nav {
+		display: flex;
+		align-items: center;
+		gap: var(--space-6);
+	}
+
+	.nav-link {
+		font-size: var(--text-base);
+		font-weight: 600;
+		color: var(--color-gray-900);
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	.nav-link:hover {
+		color: var(--color-primary);
+	}
+
+	.nav-button {
+		padding: var(--space-2) var(--space-4);
+		background: var(--color-gray-900);
+		color: var(--color-white);
+		border: var(--border-width) solid var(--color-border);
+		border-radius: 100px;
+		font-size: var(--text-base);
+		font-weight: 700;
+		text-decoration: none;
+		transition: transform 0.2s ease;
+	}
+
+	.nav-button:hover {
+		transform: scale(1.05);
+	}
+
+	/* Responsive */
+	@media (max-width: 768px) {
+		.nav-link {
+			display: none;
+		}
+
+		.logo {
+			font-size: var(--text-lg);
+		}
+	}
+</style>
