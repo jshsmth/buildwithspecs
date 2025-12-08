@@ -1,46 +1,52 @@
-# Astro Starter Kit: Basics
+# BuildWithSpecs
 
-```sh
-npm create astro@latest -- --template basics
-```
+BuildWithSpecs is a free methodology and toolset for building better software with AI assistance through **Spec-Driven Development**.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## What is Spec-Driven Development?
 
-## 🚀 Project Structure
+Spec-Driven Development is a structured approach to software development that puts planning first. Instead of jumping straight into coding with AI tools and dealing with unclear requirements and constant rewrites, you create a detailed specification before any code is written.
 
-Inside of your Astro project, you'll see the following folders and files:
+Think of it like building a house - you wouldn't start construction without blueprints. Similarly, you shouldn't start coding without a clear plan.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## The Problem We Solve
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+When working with AI coding assistants, many developers face:
 
-## 🧞 Commands
+- **Unclear requirements** that lead to building the wrong thing
+- **Scope creep** where projects grow beyond their original intent
+- **Constant rewrites** because the AI didn't understand what you wanted
+- **Team misalignment** where everyone has a different vision
 
-All commands are run from the root of the project, from a terminal:
+## How It Works
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Spec-Driven Development follows a simple 4-step process:
 
-## 👀 Want to learn more?
+1. **Requirements** - Define your goals and project scope clearly
+2. **Design** - Plan your architecture and how components will work together
+3. **Tasks** - Break down the work into manageable pieces
+4. **Build** - Let AI implement your well-defined specification
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+By spending time on steps 1-3, step 4 becomes dramatically faster and more accurate.
+
+## What You Get
+
+- **10x faster planning** - Structured templates guide you through the planning process
+- **85% fewer rewrites** - Clear specs mean AI builds it right the first time
+- **100% team aligned** - Everyone works from the same specification document
+
+## Getting Started
+
+Download the free Spec Architect agent for Claude Code - it's a 29KB file that guides you through creating professional specifications for your projects. No signup required, completely free to use.
+
+Visit [buildwithspecs.com](https://buildwithspecs.com) to learn more and download the agent.
+
+## Who Is This For?
+
+- Developers using AI coding assistants who want better results
+- Teams that need to align on project direction before coding
+- Anyone tired of unclear requirements leading to wasted development time
+- People who want to work smarter with AI, not harder
+
+## Philosophy
+
+This is a free and open methodology. We believe better planning leads to better software, and everyone should have access to these practices. Spec-Driven Development works with any AI coding tool and any programming language.
