@@ -1,5 +1,5 @@
 ---
-import Button from './Button.astro';
+// No imports needed
 ---
 
 <section class="section download-section" id="download">
@@ -11,14 +11,14 @@ import Button from './Button.astro';
 			</p>
 
 			<div class="download-cta">
-				<Button href="/downloads/spec-architect.md" variant="primary" size="lg" class="download-btn">
+				<a href="/downloads/spec-architect.md" download="spec-architect.md" class="btn btn-primary btn-lg download-btn" role="button">
 					<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 						<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
 						<polyline points="7 10 12 15 17 10"></polyline>
 						<line x1="12" y1="15" x2="12" y2="3"></line>
 					</svg>
 					Download spec-architect.md
-				</Button>
+				</a>
 				<p class="file-info">Free • 29KB • Markdown file</p>
 			</div>
 
@@ -79,6 +79,44 @@ mv spec-architect.md .claude/agents/
 
 	.download-cta {
 		margin: var(--space-12) 0;
+	}
+
+	.download-cta .btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: var(--space-2);
+		font-weight: 700;
+		border-radius: var(--border-radius);
+		border: var(--border-width) solid var(--color-border);
+		cursor: pointer;
+		transition: all var(--transition-fast);
+		text-decoration: none;
+		font-family: var(--font-sans);
+		white-space: nowrap;
+		position: relative;
+	}
+
+	.download-cta .btn-primary {
+		background: var(--color-white);
+		color: var(--color-primary);
+		box-shadow: var(--shadow-brutal-sm);
+		border-color: var(--color-border);
+	}
+
+	.download-cta .btn-primary:hover {
+		transform: translate(2px, 2px);
+		box-shadow: 4px 4px 0 var(--color-gray-900);
+	}
+
+	.download-cta .btn-primary:active {
+		transform: translate(4px, 4px);
+		box-shadow: 2px 2px 0 var(--color-gray-900);
+	}
+
+	.download-cta .btn-lg {
+		padding: var(--space-4) var(--space-8);
+		font-size: var(--text-lg);
 	}
 
 	.download-btn {
