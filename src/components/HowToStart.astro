@@ -87,6 +87,11 @@ import Button from './Button.astro';
 				Download spec-architect.md
 			</Button>
 			<p class="file-info">Free • 29KB • No signup required</p>
+
+			<div class="support-cta">
+				<p class="support-text">Enjoying the free agent? Help keep this project going!</p>
+				<script is:inline type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="joshua.smith" data-color="#c6ecd4" data-emoji="☕"  data-font="Lato" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#FFDD00"></script>
+			</div>
 		</div>
 	</div>
 </section>
@@ -215,6 +220,38 @@ import Button from './Button.astro';
 		font-size: var(--text-sm);
 		color: var(--color-text-secondary);
 		margin-top: var(--space-3);
+	}
+
+	.support-cta {
+		margin-top: var(--space-8);
+		padding-top: var(--space-8);
+		border-top: 2px dashed var(--color-gray-300);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--space-4);
+	}
+
+	.support-text {
+		font-size: var(--text-base);
+		color: var(--color-text-secondary);
+		margin-bottom: 0;
+	}
+
+	/* Mobile optimizations */
+	@media (max-width: 640px) {
+		.download-cta {
+			padding: var(--space-4) var(--space-3);
+		}
+
+		.download-cta h3 {
+			font-size: var(--text-2xl);
+		}
+
+		.download-intro {
+			font-size: var(--text-lg);
+			margin-bottom: var(--space-6);
+		}
 	}
 
 	.support-note {
