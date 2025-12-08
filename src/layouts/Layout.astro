@@ -1,22 +1,292 @@
+---
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const {
+	title = 'Spec-Driven Development | Build Better Software with AI',
+	description = 'Learn how spec-driven development transforms AI-assisted coding. Plan before you build with structured requirements, design, and tasks.'
+} = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://buildwithspecs.com/" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://buildwithspecs.com/" />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+
+		<!-- Skip to main content for accessibility -->
+		<a href="#main-content" class="skip-link">Skip to main content</a>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
-	body {
+<style is:global>
+	/* =========================================
+	   CSS CUSTOM PROPERTIES - DESIGN SYSTEM
+	   ========================================= */
+	:root {
+		/* Colors - Light Theme */
+		--color-white: #ffffff;
+		--color-gray-50: #f9fafb;
+		--color-gray-100: #f3f4f6;
+		--color-gray-200: #e5e7eb;
+		--color-gray-300: #d1d5db;
+		--color-gray-400: #9ca3af;
+		--color-gray-500: #6b7280;
+		--color-gray-600: #4b5563;
+		--color-gray-700: #374151;
+		--color-gray-800: #1f2937;
+		--color-gray-900: #111827;
+
+		/* Colors - Claude Code Brand (Orange/Coral) */
+		--color-claude-50: #fff7ed;
+		--color-claude-100: #ffedd5;
+		--color-claude-200: #fed7aa;
+		--color-claude-400: #fb923c;
+		--color-claude-500: #f97316;
+		--color-claude-600: #ea580c;
+		--color-claude-700: #c2410c;
+
+		/* Colors - Accent Amber (Warm complement) */
+		--color-amber-50: #fffbeb;
+		--color-amber-100: #fef3c7;
+		--color-amber-500: #f59e0b;
+		--color-amber-600: #d97706;
+
+		/* Colors - Accent Teal (Cool complement) */
+		--color-teal-50: #f0fdfa;
+		--color-teal-100: #ccfbf1;
+		--color-teal-500: #14b8a6;
+		--color-teal-600: #0d9488;
+
+		/* Colors - Semantic */
+		--color-background: var(--color-white);
+		--color-surface: var(--color-gray-50);
+		--color-surface-elevated: var(--color-white);
+		--color-text-primary: var(--color-gray-900);
+		--color-text-secondary: var(--color-gray-700);
+		--color-text-muted: var(--color-gray-500);
+		--color-border: var(--color-gray-200);
+		--color-border-strong: var(--color-gray-300);
+
+		/* Typography - Font Families */
+		--font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+		--font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+
+		/* Typography - Font Sizes (Fluid) */
+		--text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+		--text-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+		--text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+		--text-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+		--text-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+		--text-2xl: clamp(1.5rem, 1.3rem + 1vw, 1.875rem);
+		--text-3xl: clamp(1.875rem, 1.6rem + 1.375vw, 2.25rem);
+		--text-4xl: clamp(2.25rem, 1.9rem + 1.75vw, 3rem);
+		--text-5xl: clamp(3rem, 2.5rem + 2.5vw, 3.75rem);
+
+		/* Spacing */
+		--space-1: 0.25rem;
+		--space-2: 0.5rem;
+		--space-3: 0.75rem;
+		--space-4: 1rem;
+		--space-5: 1.25rem;
+		--space-6: 1.5rem;
+		--space-8: 2rem;
+		--space-10: 2.5rem;
+		--space-12: 3rem;
+		--space-16: 4rem;
+		--space-20: 5rem;
+		--space-24: 6rem;
+		--space-32: 8rem;
+
+		/* Layout */
+		--container-max: 1200px;
+		--container-narrow: 800px;
+		--border-radius: 0.5rem;
+		--border-radius-lg: 1rem;
+
+		/* Shadows */
+		--shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+		--shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+		--shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+		--shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+
+		/* Transitions */
+		--transition-fast: 150ms ease-in-out;
+		--transition-base: 250ms ease-in-out;
+		--transition-slow: 350ms ease-in-out;
+	}
+
+	/* =========================================
+	   CSS RESET
+	   ========================================= */
+	*, *::before, *::after {
+		box-sizing: border-box;
 		margin: 0;
-		width: 100%;
-		height: 100%;
+		padding: 0;
+	}
+
+	html {
+		scroll-behavior: smooth;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	body {
+		font-family: var(--font-sans);
+		font-size: var(--text-base);
+		line-height: 1.6;
+		color: var(--color-text-primary);
+		background-color: var(--color-background);
+		min-height: 100vh;
+	}
+
+	/* =========================================
+	   TYPOGRAPHY
+	   ========================================= */
+	h1, h2, h3, h4, h5, h6 {
+		line-height: 1.2;
+		font-weight: 700;
+		color: var(--color-text-primary);
+	}
+
+	h1 {
+		font-size: var(--text-5xl);
+		margin-bottom: var(--space-6);
+	}
+
+	h2 {
+		font-size: var(--text-4xl);
+		margin-bottom: var(--space-5);
+	}
+
+	h3 {
+		font-size: var(--text-3xl);
+		margin-bottom: var(--space-4);
+	}
+
+	h4 {
+		font-size: var(--text-2xl);
+		margin-bottom: var(--space-3);
+	}
+
+	p {
+		margin-bottom: var(--space-4);
+		color: var(--color-text-secondary);
+	}
+
+	a {
+		color: var(--color-claude-600);
+		text-decoration: none;
+		transition: color var(--transition-fast);
+	}
+
+	a:hover {
+		color: var(--color-claude-700);
+	}
+
+	code {
+		font-family: var(--font-mono);
+		font-size: 0.9em;
+		padding: 0.125rem 0.25rem;
+		background-color: var(--color-claude-50);
+		color: var(--color-claude-700);
+		border-radius: 0.25rem;
+		border: 1px solid var(--color-claude-200);
+	}
+
+	/* =========================================
+	   ACCESSIBILITY
+	   ========================================= */
+	.skip-link {
+		position: absolute;
+		top: -40px;
+		left: 0;
+		background: var(--color-claude-600);
+		color: white;
+		padding: var(--space-2) var(--space-4);
+		text-decoration: none;
+		z-index: 100;
+	}
+
+	.skip-link:focus {
+		top: 0;
+	}
+
+	*:focus-visible {
+		outline: 3px solid var(--color-claude-600);
+		outline-offset: 2px;
+	}
+
+	/* Section dividers */
+	.section-divider {
+		height: 1px;
+		background: linear-gradient(90deg, transparent, var(--color-border-strong), transparent);
+		margin: 0;
+	}
+
+	/* Respect user motion preferences */
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+
+		*, *::before, *::after {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+		}
+	}
+
+	/* =========================================
+	   UTILITY CLASSES
+	   ========================================= */
+	.container {
+		max-width: var(--container-max);
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: var(--space-4);
+		padding-right: var(--space-4);
+	}
+
+	.container-narrow {
+		max-width: var(--container-narrow);
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: var(--space-4);
+		padding-right: var(--space-4);
+	}
+
+	.section {
+		padding: var(--space-20) 0;
+	}
+
+	@media (min-width: 768px) {
+		.section {
+			padding: var(--space-32) 0;
+		}
 	}
 </style>

@@ -1,0 +1,184 @@
+---
+// HowToStart Section - Getting started guide
+---
+
+<section class="section how-to-start" id="how-to-start">
+	<div class="container-narrow">
+		<h2>How to Get Started</h2>
+		<p class="section-intro">
+			Adopting spec-driven development is straightforward. Follow these steps to transform your workflow:
+		</p>
+
+		<div class="steps-timeline">
+			<div class="step">
+				<div class="step-marker">
+					<span class="step-number">1</span>
+					<div class="connector"></div>
+				</div>
+				<div class="step-content">
+					<h3>Download the Spec Architect Agent</h3>
+					<p>Get our free Claude Code agent that guides you through creating perfect specifications. It handles Requirements → Design → Tasks automatically.</p>
+				</div>
+			</div>
+
+			<div class="step">
+				<div class="step-marker">
+					<span class="step-number">2</span>
+					<div class="connector"></div>
+				</div>
+				<div class="step-content">
+					<h3>Install in Your Project</h3>
+					<p>Place <code>spec-architect.md</code> in your <code>.claude/agents/</code> directory. The agent becomes available in all Claude Code sessions for that project.</p>
+				</div>
+			</div>
+
+			<div class="step">
+				<div class="step-marker">
+					<span class="step-number">3</span>
+					<div class="connector"></div>
+				</div>
+				<div class="step-content">
+					<h3>Start with a Feature</h3>
+					<p>Pick any upcoming feature. Ask Claude to use spec mode. The agent will walk you through Requirements, Design, and Tasks phases with approval gates.</p>
+				</div>
+			</div>
+
+			<div class="step">
+				<div class="step-marker">
+					<span class="step-number">4</span>
+					<div class="connector"></div>
+				</div>
+				<div class="step-content">
+					<h3>Review and Approve</h3>
+					<p>At each gate, review the spec. Request changes, ask questions, or approve to continue. The spec becomes your single source of truth.</p>
+				</div>
+			</div>
+
+			<div class="step">
+				<div class="step-marker">
+					<span class="step-number">5</span>
+					<div class="connector-last"></div>
+				</div>
+				<div class="step-content">
+					<h3>Let AI Build It</h3>
+					<p>Hand the completed spec to Claude for implementation. Watch as it builds exactly what you planned, tracking progress against your criteria.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="pro-tip">
+			<h4>💡 Pro Tip</h4>
+			<p>Start with a small, well-defined feature for your first spec. As you get comfortable with the process, tackle larger projects. The agent scales from quick fixes to multi-week initiatives.</p>
+		</div>
+	</div>
+</section>
+
+<style>
+	.how-to-start {
+		background: var(--color-gray-50);
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.section-intro {
+		font-size: var(--text-xl);
+		text-align: center;
+		margin-bottom: var(--space-16);
+		color: var(--color-text-secondary);
+	}
+
+	.steps-timeline {
+		margin: var(--space-12) 0;
+	}
+
+	.step {
+		display: grid;
+		grid-template-columns: 60px 1fr;
+		gap: var(--space-6);
+		margin-bottom: var(--space-8);
+	}
+
+	.step-marker {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.step-number {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 60px;
+		background: var(--color-claude-600);
+		color: white;
+		border-radius: 50%;
+		font-size: var(--text-2xl);
+		font-weight: 800;
+		flex-shrink: 0;
+		box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+	}
+
+	.connector {
+		width: 3px;
+		flex-grow: 1;
+		background: var(--color-claude-200);
+		margin: var(--space-2) 0;
+	}
+
+	.connector-last {
+		width: 3px;
+		height: 40px;
+		background: var(--color-claude-200);
+		margin: var(--space-2) 0;
+	}
+
+	.step-content {
+		padding: var(--space-4) 0;
+	}
+
+	.step-content h3 {
+		font-size: var(--text-2xl);
+		margin-bottom: var(--space-3);
+		color: var(--color-text-primary);
+	}
+
+	.step-content p {
+		font-size: var(--text-lg);
+		line-height: 1.7;
+		margin-bottom: 0;
+		color: var(--color-text-secondary);
+	}
+
+	.pro-tip {
+		background: var(--color-cyan-50);
+		padding: var(--space-8);
+		border-radius: var(--border-radius-lg);
+		border: 2px solid var(--color-cyan-500);
+		margin-top: var(--space-16);
+	}
+
+	.pro-tip h4 {
+		font-size: var(--text-2xl);
+		margin-bottom: var(--space-4);
+		color: var(--color-cyan-700);
+	}
+
+	.pro-tip p {
+		font-size: var(--text-lg);
+		margin-bottom: 0;
+		line-height: 1.7;
+	}
+
+	@media (max-width: 640px) {
+		.step {
+			grid-template-columns: 50px 1fr;
+			gap: var(--space-4);
+		}
+
+		.step-number {
+			width: 50px;
+			height: 50px;
+			font-size: var(--text-xl);
+		}
+	}
+</style>

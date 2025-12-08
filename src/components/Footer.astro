@@ -1,0 +1,121 @@
+---
+// Footer component
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+	<div class="container">
+		<div class="footer-content">
+			<div class="footer-brand">
+				<h3>BuildWithSpecs</h3>
+				<p>Better software through better planning.</p>
+			</div>
+
+			<div class="footer-links">
+				<div class="footer-section">
+					<h4>Resources</h4>
+					<ul>
+						<li><a href="#what-is-sdd">What is SDD?</a></li>
+						<li><a href="#why-it-matters">Why It Matters</a></li>
+						<li><a href="#how-to-start">How to Start</a></li>
+						<li><a href="#download">Download Agent</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-section">
+					<h4>Project</h4>
+					<ul>
+						<li><a href="https://docs.anthropic.com/claude/docs" target="_blank" rel="noopener noreferrer">Claude Docs</a></li>
+						<li><a href="https://github.com/anthropics/claude-code" target="_blank" rel="noopener noreferrer">Claude Code</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer-bottom">
+			<p>&copy; {currentYear} BuildWithSpecs. Free and open methodology.</p>
+		</div>
+	</div>
+</footer>
+
+<style>
+	.footer {
+		background: var(--color-gray-900);
+		color: var(--color-gray-300);
+		padding: var(--space-16) 0 var(--space-8);
+	}
+
+	.footer-content {
+		display: grid;
+		grid-template-columns: 1.5fr 1fr;
+		gap: var(--space-12);
+		margin-bottom: var(--space-12);
+	}
+
+	.footer-brand h3 {
+		font-size: var(--text-2xl);
+		margin-bottom: var(--space-2);
+		color: var(--color-claude-400);
+	}
+
+	.footer-brand p {
+		color: var(--color-gray-400);
+		margin-bottom: 0;
+	}
+
+	.footer-links {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--space-8);
+	}
+
+	.footer-section h4 {
+		font-size: var(--text-lg);
+		margin-bottom: var(--space-4);
+		color: white;
+	}
+
+	.footer-section ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.footer-section li {
+		margin-bottom: var(--space-2);
+	}
+
+	.footer-section a {
+		color: var(--color-gray-400);
+		text-decoration: none;
+		transition: color var(--transition-fast);
+		font-size: var(--text-base);
+	}
+
+	.footer-section a:hover {
+		color: var(--color-claude-400);
+	}
+
+	.footer-bottom {
+		padding-top: var(--space-8);
+		border-top: 1px solid var(--color-gray-800);
+		text-align: center;
+	}
+
+	.footer-bottom p {
+		color: var(--color-gray-500);
+		font-size: var(--text-sm);
+		margin-bottom: 0;
+	}
+
+	@media (max-width: 768px) {
+		.footer-content {
+			grid-template-columns: 1fr;
+			gap: var(--space-8);
+		}
+
+		.footer-links {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

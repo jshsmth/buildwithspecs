@@ -1,0 +1,225 @@
+---
+import Button from './Button.astro';
+---
+
+<section class="hero" id="main-content">
+	<div class="container">
+		<div class="hero-grid">
+			<div class="hero-content">
+				<h1 class="hero-title">
+					Build Better Software with <span class="gradient-text">Spec-Driven Development</span>
+				</h1>
+				<p class="hero-subtitle">
+					Stop wasting time on unclear requirements and scope creep. Plan before you build with structured specifications that transform AI-assisted coding from chaotic to confident.
+				</p>
+				<div class="hero-cta">
+					<Button href="#download" variant="primary" size="lg">
+						Download Free Agent
+					</Button>
+					<Button href="#what-is-sdd" variant="outline" size="lg">
+						Learn More
+					</Button>
+				</div>
+			</div>
+
+			<div class="hero-visual">
+				<div class="code-window">
+					<div class="window-header">
+						<div class="window-dots">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="window-title">spec-architect.md</div>
+					</div>
+					<div class="window-content">
+						<div class="code-line"><span class="comment"># Phase 1: Requirements ✅</span></div>
+						<div class="code-line"><span class="keyword">User Stories:</span> <span class="string">10 defined</span></div>
+						<div class="code-line"><span class="keyword">Acceptance Criteria:</span> <span class="string">42 conditions</span></div>
+						<div class="code-line blank"></div>
+						<div class="code-line"><span class="comment"># Phase 2: Design ✅</span></div>
+						<div class="code-line"><span class="keyword">Components:</span> <span class="string">15 designed</span></div>
+						<div class="code-line"><span class="keyword">Architecture:</span> <span class="string">Validated</span></div>
+						<div class="code-line blank"></div>
+						<div class="code-line"><span class="comment"># Phase 3: Tasks 🔄</span></div>
+						<div class="code-line"><span class="keyword">Progress:</span> <span class="string">█████████░ 85%</span></div>
+						<div class="code-line cursor"><span class="keyword">Building:</span> <span class="string">DownloadSection.astro</span><span class="blink">|</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.hero {
+		min-height: 90vh;
+		display: flex;
+		align-items: center;
+		padding: var(--space-20) 0;
+		background: var(--color-white);
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.hero-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: var(--space-16);
+		align-items: center;
+	}
+
+	.hero-content {
+		text-align: left;
+	}
+
+	.hero-title {
+		font-size: clamp(2.5rem, 5vw, 3.5rem);
+		line-height: 1.1;
+		margin-bottom: var(--space-6);
+		font-weight: 900;
+		letter-spacing: -0.02em;
+	}
+
+	.gradient-text {
+		color: var(--color-claude-600);
+	}
+
+	.hero-subtitle {
+		font-size: var(--text-xl);
+		line-height: 1.7;
+		color: var(--color-text-secondary);
+		margin-bottom: var(--space-8);
+	}
+
+	.hero-cta {
+		display: flex;
+		gap: var(--space-4);
+		flex-wrap: wrap;
+	}
+
+	/* Code Window Visual */
+	.hero-visual {
+		position: relative;
+	}
+
+	.code-window {
+		background: var(--color-gray-900);
+		border-radius: var(--border-radius-lg);
+		overflow: hidden;
+		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+		border: 1px solid var(--color-gray-700);
+	}
+
+	.window-header {
+		background: var(--color-gray-800);
+		padding: var(--space-3) var(--space-4);
+		display: flex;
+		align-items: center;
+		gap: var(--space-3);
+		border-bottom: 1px solid var(--color-gray-700);
+	}
+
+	.window-dots {
+		display: flex;
+		gap: var(--space-2);
+	}
+
+	.window-dots span {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: var(--color-gray-600);
+	}
+
+	.window-dots span:nth-child(1) {
+		background: #ff5f56;
+	}
+
+	.window-dots span:nth-child(2) {
+		background: #ffbd2e;
+	}
+
+	.window-dots span:nth-child(3) {
+		background: #27c93f;
+	}
+
+	.window-title {
+		color: var(--color-gray-400);
+		font-size: var(--text-sm);
+		font-family: var(--font-mono);
+	}
+
+	.window-content {
+		padding: var(--space-6);
+		font-family: var(--font-mono);
+		font-size: var(--text-sm);
+		line-height: 1.8;
+	}
+
+	.code-line {
+		color: var(--color-gray-300);
+		margin-bottom: var(--space-2);
+	}
+
+	.code-line.blank {
+		height: var(--space-2);
+	}
+
+	.code-line.cursor {
+		background: rgba(249, 115, 22, 0.1);
+		margin-left: calc(-1 * var(--space-2));
+		padding-left: var(--space-2);
+		margin-right: calc(-1 * var(--space-2));
+		padding-right: var(--space-2);
+		border-left: 3px solid var(--color-claude-500);
+	}
+
+	.comment {
+		color: var(--color-gray-500);
+		font-style: italic;
+	}
+
+	.keyword {
+		color: var(--color-claude-400);
+		font-weight: 600;
+	}
+
+	.string {
+		color: var(--color-teal-500);
+	}
+
+	.blink {
+		animation: blink 1s infinite;
+		color: var(--color-claude-400);
+	}
+
+	@keyframes blink {
+		0%, 50% { opacity: 1; }
+		51%, 100% { opacity: 0; }
+	}
+
+	@media (max-width: 968px) {
+		.hero-grid {
+			grid-template-columns: 1fr;
+			gap: var(--space-12);
+		}
+
+		.hero-content {
+			text-align: center;
+		}
+
+		.hero-cta {
+			justify-content: center;
+		}
+
+		.hero-visual {
+			order: -1;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.hero-cta {
+			flex-direction: column;
+		}
+	}
+</style>

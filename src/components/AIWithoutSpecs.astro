@@ -1,0 +1,179 @@
+---
+// AIWithoutSpecs Section - The problem: AI without proper specs
+---
+
+<section class="section ai-without-specs" id="ai-without-specs">
+	<div class="container-narrow">
+		<div class="section-header">
+			<h2>The Problem: AI Without Specs</h2>
+			<p class="section-subtitle">
+				AI coding tools are powerful, but without clear direction, they amplify problems instead of solving them.
+			</p>
+		</div>
+
+		<div class="problems-list">
+			<div class="problem-card">
+				<div class="problem-header">
+					<div class="problem-icon">🎲</div>
+					<h3>Unpredictable Outputs</h3>
+				</div>
+				<div class="problem-content">
+					<p class="problem-desc"><strong>Problem:</strong> Vague prompts lead to inconsistent implementations. AI guesses at requirements and edge cases.</p>
+					<p class="solution-desc"><strong>Solution:</strong> Specs define exact requirements and constraints. AI builds what you <em>actually</em> need.</p>
+				</div>
+			</div>
+
+			<div class="problem-card">
+				<div class="problem-header">
+					<div class="problem-icon">🔁</div>
+					<h3>Endless Iteration Loops</h3>
+				</div>
+				<div class="problem-content">
+					<p class="problem-desc"><strong>Problem:</strong> Without upfront clarity, you're constantly reworking code instead of shipping.</p>
+					<p class="solution-desc"><strong>Solution:</strong> Changes become intentional updates to the spec, not ad-hoc code rewrites.</p>
+				</div>
+			</div>
+
+			<div class="problem-card">
+				<div class="problem-header">
+					<div class="problem-icon">🧩</div>
+					<h3>Integration Nightmares</h3>
+				</div>
+				<div class="problem-content">
+					<p class="problem-desc"><strong>Problem:</strong> AI generates components that don't fit together. Incompatible patterns, duplicated logic.</p>
+					<p class="solution-desc"><strong>Solution:</strong> Design phase establishes architecture. Every component knows its place in the system.</p>
+				</div>
+			</div>
+
+			<div class="problem-card">
+				<div class="problem-header">
+					<div class="problem-icon">⚠️</div>
+					<h3>Missing Edge Cases</h3>
+				</div>
+				<div class="problem-content">
+					<p class="problem-desc"><strong>Problem:</strong> AI focuses on happy paths. Error handling and accessibility get overlooked until production.</p>
+					<p class="solution-desc"><strong>Solution:</strong> Requirements phase identifies edge cases upfront. AI implements complete, production-ready features.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="callout">
+			<h4>Bottom Line</h4>
+			<p>AI is a multiplier, not a replacement for thinking. Give it clear specs, and it becomes your most productive teammate.</p>
+		</div>
+	</div>
+</section>
+
+<style>
+	.ai-without-specs {
+		background: var(--color-white);
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.container-narrow {
+		max-width: 1000px;
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: var(--space-16);
+	}
+
+	.section-subtitle {
+		font-size: var(--text-xl);
+		color: var(--color-text-secondary);
+		line-height: 1.6;
+		margin-top: var(--space-4);
+	}
+
+	.problems-list {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-6);
+		margin-bottom: var(--space-12);
+	}
+
+	.problem-card {
+		background: var(--color-white);
+		border: 2px solid var(--color-border);
+		border-radius: var(--border-radius-lg);
+		overflow: hidden;
+		transition: all var(--transition-base);
+	}
+
+	.problem-card:hover {
+		border-color: var(--color-claude-500);
+		box-shadow: var(--shadow-lg);
+	}
+
+	.problem-header {
+		display: flex;
+		align-items: center;
+		gap: var(--space-4);
+		padding: var(--space-6);
+		background: var(--color-claude-50);
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.problem-icon {
+		font-size: 2rem;
+		flex-shrink: 0;
+	}
+
+	.problem-header h3 {
+		font-size: var(--text-xl);
+		margin-bottom: 0;
+		color: var(--color-claude-700);
+	}
+
+	.problem-content {
+		padding: var(--space-6);
+	}
+
+	.problem-desc {
+		margin-bottom: var(--space-4);
+		padding: var(--space-4);
+		background: #fef2f2;
+		border-left: 3px solid #ef4444;
+		border-radius: var(--border-radius);
+	}
+
+	.solution-desc {
+		margin-bottom: 0;
+		padding: var(--space-4);
+		background: #f0fdf4;
+		border-left: 3px solid #22c55e;
+		border-radius: var(--border-radius);
+	}
+
+	.problem-desc strong,
+	.solution-desc strong {
+		color: var(--color-gray-900);
+		display: block;
+		margin-bottom: var(--space-2);
+	}
+
+	.callout {
+		background: var(--color-claude-100);
+		padding: var(--space-10);
+		border-radius: var(--border-radius-lg);
+		border: 2px solid var(--color-claude-500);
+		text-align: center;
+	}
+
+	.callout h4 {
+		font-size: var(--text-2xl);
+		margin-bottom: var(--space-4);
+		color: var(--color-claude-700);
+	}
+
+	.callout p {
+		font-size: var(--text-xl);
+		margin-bottom: 0;
+		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+		color: var(--color-gray-900);
+		line-height: 1.6;
+	}
+</style>
