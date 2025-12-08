@@ -1,6 +1,7 @@
 ---
 // Header Component - Navigation bar
 import Logo from './Logo.astro';
+import Button from './Button.astro';
 ---
 
 <header class="header">
@@ -14,7 +15,7 @@ import Logo from './Logo.astro';
 			<nav class="nav">
 				<a href="#what-is-sdd" class="nav-link">Overview</a>
 				<a href="#how-to-start" class="nav-link">Guide</a>
-				<a href="#download" class="nav-button">Download</a>
+				<Button href="#download" variant="secondary" size="md">Download</Button>
 			</nav>
 		</div>
 	</div>
@@ -77,22 +78,6 @@ import Logo from './Logo.astro';
 
 	.nav-link:hover {
 		color: var(--color-primary);
-	}
-
-	.nav-button {
-		padding: var(--space-2) var(--space-4);
-		background: var(--color-gray-900);
-		color: var(--color-white);
-		border: var(--border-width) solid var(--color-border);
-		border-radius: 100px;
-		font-size: var(--text-base);
-		font-weight: 700;
-		text-decoration: none;
-		transition: transform 0.2s ease;
-	}
-
-	.nav-button:hover {
-		transform: scale(1.05);
 	}
 
 	/* Responsive */

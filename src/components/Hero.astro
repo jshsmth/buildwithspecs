@@ -50,7 +50,7 @@ const {} = Astro.props;
 						</svg>
 						Download Free Agent
 					</a>
-					<Button href="#what-is-sdd" variant="outline" size="lg">
+					<Button href="#what-is-sdd" variant="secondary" size="lg">
 						Learn More
 					</Button>
 				</div>
@@ -453,24 +453,12 @@ const {} = Astro.props;
 	}
 
 	@media (max-width: 768px) {
-		.waypoint {
-			margin-bottom: var(--space-8);
+		.hero-right {
+			display: none;
 		}
 
-		.waypoint-number {
-			width: 32px;
-			height: 32px;
-			font-size: var(--text-sm);
-		}
-
-		.waypoint-icon {
-			width: 40px;
-			height: 40px;
-		}
-
-		.waypoint-icon svg {
-			width: 18px;
-			height: 18px;
+		.stats-inline {
+			display: none;
 		}
 	}
 

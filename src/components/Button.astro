@@ -60,7 +60,7 @@ const Element = href ? 'a' : 'button';
 	}
 
 	.btn-secondary {
-		background: var(--color-accent);
+		background: var(--color-white);
 		color: var(--color-gray-900);
 		border-color: var(--color-border);
 		box-shadow: var(--shadow-brutal-sm);
@@ -69,6 +69,11 @@ const Element = href ? 'a' : 'button';
 	.btn-secondary:hover {
 		transform: translate(2px, 2px);
 		box-shadow: 4px 4px 0 var(--color-gray-900);
+	}
+
+	.btn-secondary:active {
+		transform: translate(4px, 4px);
+		box-shadow: 2px 2px 0 var(--color-gray-900);
 	}
 
 	.btn-outline {
