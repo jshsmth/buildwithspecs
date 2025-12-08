@@ -1,0 +1,166 @@
+---
+// WhyItMatters Section - Benefits of spec-driven development
+---
+
+<section class="section why-it-matters" id="why-it-matters">
+	<div class="container">
+		<div class="why-grid">
+			<div class="why-content">
+				<h2>Why Spec-Driven Development Matters</h2>
+				<p class="lead-text">
+					In the age of AI-assisted coding, the bottleneck isn't writing code—it's knowing <em>what</em> to build and <em>why</em>.
+				</p>
+
+				<div class="key-benefits">
+					<div class="key-benefit">
+						<div class="benefit-icon">🎯</div>
+						<div>
+							<h3>Crystal-Clear Direction</h3>
+							<p>No mid-project pivots or wasted sprints. Everyone knows what success looks like.</p>
+						</div>
+					</div>
+
+					<div class="key-benefit">
+						<div class="benefit-icon">⚡</div>
+						<div>
+							<h3>Faster AI Collaboration</h3>
+							<p>Transform vague prompts into precise implementations with structured specs.</p>
+						</div>
+					</div>
+
+					<div class="key-benefit">
+						<div class="benefit-icon">🛡️</div>
+						<div>
+							<h3>Reduced Technical Debt</h3>
+							<p>Architectural decisions made upfront, not hastily patched later.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="why-visual">
+				<div class="stats-card">
+					<div class="stat">
+						<div class="stat-number">10x</div>
+						<div class="stat-label">Faster Planning</div>
+						<div class="stat-desc">With AI-assisted spec generation</div>
+					</div>
+					<div class="stat">
+						<div class="stat-number">85%</div>
+						<div class="stat-label">Fewer Rewrites</div>
+						<div class="stat-desc">Clear requirements from the start</div>
+					</div>
+					<div class="stat">
+						<div class="stat-number">100%</div>
+						<div class="stat-label">Team Alignment</div>
+						<div class="stat-desc">Single source of truth for all</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.why-it-matters {
+		background: var(--color-pastel-yellow);
+	}
+
+	.why-grid {
+		display: grid;
+		grid-template-columns: 1.2fr 1fr;
+		gap: var(--space-16);
+		align-items: center;
+	}
+
+	.why-content h2 {
+		margin-bottom: var(--space-6);
+	}
+
+	.lead-text {
+		font-size: var(--text-xl);
+		line-height: 1.7;
+		color: var(--color-text-secondary);
+		margin-bottom: var(--space-10);
+	}
+
+	.key-benefits {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-6);
+	}
+
+	.key-benefit {
+		display: flex;
+		gap: var(--space-4);
+		align-items: flex-start;
+	}
+
+	.benefit-icon {
+		font-size: 2.5rem;
+		flex-shrink: 0;
+		line-height: 1;
+	}
+
+	.key-benefit h3 {
+		font-size: var(--text-xl);
+		margin-bottom: var(--space-2);
+		color: var(--color-gray-900);
+	}
+
+	.key-benefit p {
+		font-size: var(--text-base);
+		line-height: 1.6;
+		color: var(--color-text-secondary);
+		margin-bottom: 0;
+	}
+
+	/* Stats Visual */
+	.stats-card {
+		background: var(--color-white);
+		padding: var(--space-10);
+		border-radius: var(--border-radius);
+		box-shadow: var(--shadow-brutal-lg);
+		border: var(--border-width) solid var(--color-border);
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-8);
+	}
+
+	.stat {
+		text-align: center;
+		padding: var(--space-6);
+		background: var(--color-pastel-pink);
+		border-radius: var(--border-radius);
+		border: var(--border-width) solid var(--color-border);
+		box-shadow: var(--shadow-brutal-sm);
+	}
+
+	.stat-number {
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		font-weight: 900;
+		line-height: 1;
+		margin-bottom: var(--space-3);
+		color: var(--color-primary);
+	}
+
+	.stat-label {
+		font-size: var(--text-xl);
+		font-weight: 700;
+		margin-bottom: var(--space-2);
+		color: var(--color-gray-900);
+	}
+
+	.stat-desc {
+		font-size: var(--text-sm);
+		color: var(--color-text-secondary);
+		line-height: 1.5;
+	}
+
+	@media (max-width: 968px) {
+		.why-grid {
+			grid-template-columns: 1fr;
+			gap: var(--space-12);
+		}
+	}
+</style>

@@ -1,0 +1,82 @@
+---
+// Footer component
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+	<div class="container">
+		<div class="footer-content">
+			<div class="footer-text">
+				<strong>Build with Spec</strong> — Better software through better planning.
+			</div>
+			<div class="footer-links">
+				<a href="https://docs.anthropic.com/claude/docs" target="_blank" rel="noopener noreferrer">Claude Docs</a>
+				<a href="https://github.com/anthropics/claude-code" target="_blank" rel="noopener noreferrer">Claude Code</a>
+			</div>
+		</div>
+		<div class="footer-credit">
+			&copy; {currentYear} BuildWithSpecs • Free and open methodology
+		</div>
+	</div>
+</footer>
+
+<style>
+	.footer {
+		background: var(--color-pastel-pink);
+		padding: var(--space-8) 0;
+	}
+
+	.footer-content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: var(--space-4);
+		margin-bottom: var(--space-4);
+		border-bottom: var(--border-width) solid var(--color-border);
+	}
+
+	.footer-text {
+		font-size: var(--text-base);
+		color: var(--color-gray-900);
+	}
+
+	.footer-text strong {
+		font-weight: 900;
+	}
+
+	.footer-links {
+		display: flex;
+		gap: var(--space-6);
+	}
+
+	.footer-links a {
+		font-size: var(--text-sm);
+		font-weight: 600;
+		color: var(--color-gray-900);
+		text-decoration: none;
+		transition: color var(--transition-fast);
+	}
+
+	.footer-links a:hover {
+		color: var(--color-primary);
+	}
+
+	.footer-credit {
+		text-align: center;
+		font-size: var(--text-sm);
+		color: var(--color-gray-700);
+	}
+
+	@media (max-width: 768px) {
+		.footer-content {
+			flex-direction: column;
+			gap: var(--space-4);
+			text-align: center;
+		}
+
+		.footer-links {
+			flex-direction: column;
+			gap: var(--space-2);
+		}
+	}
+</style>

@@ -1,0 +1,118 @@
+---
+// DonateSection - Support section with payment placeholders
+---
+
+<section class="section donate-section" id="donate">
+	<div class="container-narrow">
+		<div class="donate-content">
+			<h2>Support This Project</h2>
+			<p class="donate-intro">
+				If spec-driven development has helped you build better software, consider supporting this free resource. Your contribution helps maintain and improve the agents.
+			</p>
+
+			<div class="payment-options">
+				<div class="payment-card">
+					<div class="payment-icon">💳</div>
+					<h3>Card Payment</h3>
+					<p>Support via credit or debit card</p>
+					<div class="coming-soon">
+						<span>Coming Soon</span>
+					</div>
+				</div>
+
+				<div class="payment-card">
+					<div class="payment-icon">₿</div>
+					<h3>Crypto Payment</h3>
+					<p>Support with cryptocurrency</p>
+					<div class="coming-soon">
+						<span>Coming Soon</span>
+					</div>
+				</div>
+			</div>
+
+			<p class="donate-note">
+				Payment integrations are in development. For now, the spec-architect agent remains <strong>completely free</strong> with no restrictions.
+			</p>
+		</div>
+	</div>
+</section>
+
+<style>
+	.donate-section {
+		background: var(--color-pastel-purple);
+		text-align: center;
+	}
+
+	.donate-content {
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+	.donate-intro {
+		font-size: var(--text-xl);
+		margin-bottom: var(--space-12);
+		color: var(--color-text-secondary);
+	}
+
+	.payment-options {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: var(--space-6);
+		margin: var(--space-12) 0;
+	}
+
+	.payment-card {
+		background: var(--color-white);
+		padding: var(--space-8);
+		border-radius: var(--border-radius);
+		border: var(--border-width) solid var(--color-border);
+		position: relative;
+		box-shadow: var(--shadow-brutal-sm);
+	}
+
+	.payment-icon {
+		font-size: 3rem;
+		margin-bottom: var(--space-4);
+	}
+
+	.payment-card h3 {
+		font-size: var(--text-2xl);
+		margin-bottom: var(--space-2);
+		color: var(--color-text-primary);
+	}
+
+	.payment-card p {
+		font-size: var(--text-base);
+		margin-bottom: var(--space-6);
+		color: var(--color-text-secondary);
+	}
+
+	.coming-soon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: var(--space-2) var(--space-4);
+		background: var(--color-pastel-yellow);
+		color: var(--color-gray-900);
+		border-radius: var(--border-radius);
+		font-size: var(--text-sm);
+		font-weight: 700;
+		border: 2px solid var(--color-border);
+	}
+
+	.donate-note {
+		font-size: var(--text-base);
+		color: var(--color-text-secondary);
+		margin-top: var(--space-8);
+		padding: var(--space-4);
+		background: var(--color-white);
+		border-radius: var(--border-radius);
+		margin-bottom: 0;
+		border: var(--border-width) solid var(--color-border);
+		box-shadow: var(--shadow-brutal-sm);
+	}
+
+	.donate-note strong {
+		color: var(--color-primary);
+	}
+</style>
