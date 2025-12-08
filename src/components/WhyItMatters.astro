@@ -63,8 +63,7 @@
 
 <style>
 	.why-it-matters {
-		background: var(--color-gray-50);
-		border-bottom: 1px solid var(--color-border);
+		background: var(--color-pastel-yellow);
 	}
 
 	.why-grid {
@@ -118,10 +117,11 @@
 
 	/* Stats Visual */
 	.stats-card {
-		background: var(--color-claude-600);
+		background: var(--color-white);
 		padding: var(--space-10);
-		border-radius: var(--border-radius-lg);
-		box-shadow: 0 20px 60px rgba(234, 88, 12, 0.3);
+		border-radius: var(--border-radius);
+		box-shadow: var(--shadow-brutal-lg);
+		border: var(--border-width) solid var(--color-border);
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-8);
@@ -129,11 +129,11 @@
 
 	.stat {
 		text-align: center;
-		color: white;
 		padding: var(--space-6);
-		background: rgba(255, 255, 255, 0.15);
+		background: var(--color-pastel-pink);
 		border-radius: var(--border-radius);
-		border: 1px solid rgba(255, 255, 255, 0.3);
+		border: var(--border-width) solid var(--color-border);
+		box-shadow: var(--shadow-brutal-sm);
 	}
 
 	.stat-number {
@@ -141,19 +141,19 @@
 		font-weight: 900;
 		line-height: 1;
 		margin-bottom: var(--space-3);
-		color: white;
+		color: var(--color-primary);
 	}
 
 	.stat-label {
 		font-size: var(--text-xl);
 		font-weight: 700;
 		margin-bottom: var(--space-2);
-		color: white;
+		color: var(--color-gray-900);
 	}
 
 	.stat-desc {
 		font-size: var(--text-sm);
-		color: rgba(255, 255, 255, 0.8);
+		color: var(--color-text-secondary);
 		line-height: 1.5;
 	}
 

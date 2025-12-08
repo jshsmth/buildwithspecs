@@ -24,63 +24,63 @@ const Element = href ? 'a' : 'button';
 		align-items: center;
 		justify-content: center;
 		gap: var(--space-2);
-		font-weight: 600;
+		font-weight: 700;
 		border-radius: var(--border-radius);
-		border: 2px solid transparent;
+		border: var(--border-width) solid var(--color-border);
 		cursor: pointer;
-		transition: all var(--transition-base);
+		transition: all var(--transition-fast);
 		text-decoration: none;
 		font-family: var(--font-sans);
 		white-space: nowrap;
+		position: relative;
 	}
 
 	.btn:focus-visible {
-		outline: 3px solid var(--color-accent-600);
+		outline: 3px solid var(--color-primary);
 		outline-offset: 2px;
 	}
 
 	/* Variants */
 	.btn-primary {
-		background: var(--color-claude-600);
+		background: var(--color-primary);
 		color: white;
-		box-shadow: 0 4px 14px rgba(234, 88, 12, 0.3);
-		border-color: transparent;
+		box-shadow: var(--shadow-brutal-sm);
+		border-color: var(--color-border);
 	}
 
 	.btn-primary:hover {
-		background: var(--color-claude-700);
-		transform: translateY(-2px);
-		box-shadow: 0 6px 20px rgba(234, 88, 12, 0.4);
+		transform: translate(2px, 2px);
+		box-shadow: 4px 4px 0 var(--color-gray-900);
 	}
 
 	.btn-primary:active {
-		transform: translateY(0);
-		box-shadow: 0 2px 8px rgba(234, 88, 12, 0.3);
+		transform: translate(4px, 4px);
+		box-shadow: 2px 2px 0 var(--color-gray-900);
 	}
 
 	.btn-secondary {
-		background: var(--color-white);
-		color: var(--color-indigo-700);
-		border-color: var(--color-border-strong);
-		box-shadow: var(--shadow-sm);
+		background: var(--color-accent);
+		color: var(--color-gray-900);
+		border-color: var(--color-border);
+		box-shadow: var(--shadow-brutal-sm);
 	}
 
 	.btn-secondary:hover {
-		background: var(--color-gray-50);
-		border-color: var(--color-claude-500);
-		box-shadow: var(--shadow-md);
+		transform: translate(2px, 2px);
+		box-shadow: 4px 4px 0 var(--color-gray-900);
 	}
 
 	.btn-outline {
-		background: transparent;
-		color: var(--color-claude-600);
-		border-color: var(--color-claude-500);
+		background: var(--color-white);
+		color: var(--color-gray-900);
+		border-color: var(--color-border);
+		box-shadow: var(--shadow-brutal-sm);
 	}
 
 	.btn-outline:hover {
-		background: var(--color-claude-50);
-		border-color: var(--color-claude-600);
-		color: var(--color-claude-700);
+		background: var(--color-pastel-blue);
+		transform: translate(2px, 2px);
+		box-shadow: 4px 4px 0 var(--color-gray-900);
 	}
 
 	/* Sizes */

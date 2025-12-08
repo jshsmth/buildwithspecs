@@ -48,49 +48,45 @@ const {
 	   CSS CUSTOM PROPERTIES - DESIGN SYSTEM
 	   ========================================= */
 	:root {
-		/* Colors - Light Theme */
+		/* Colors - Neobrutalist Pastel Palette */
+		--color-primary: #6366f1; /* Soft indigo */
+		--color-primary-light: #a5b4fc;
+		--color-primary-dark: #4f46e5;
+
+		--color-accent: #fbbf24; /* Warm yellow */
+		--color-accent-light: #fde68a;
+
+		--color-success: #34d399; /* Mint green */
+		--color-danger: #f87171; /* Soft red */
+		--color-info: #60a5fa; /* Soft blue */
+
+		/* Pastels for backgrounds */
+		--color-pastel-pink: #fce7f3;
+		--color-pastel-blue: #dbeafe;
+		--color-pastel-green: #d1fae5;
+		--color-pastel-yellow: #fef3c7;
+		--color-pastel-purple: #f3e8ff;
+
+		/* Neutrals */
 		--color-white: #ffffff;
-		--color-gray-50: #f9fafb;
-		--color-gray-100: #f3f4f6;
-		--color-gray-200: #e5e7eb;
-		--color-gray-300: #d1d5db;
-		--color-gray-400: #9ca3af;
-		--color-gray-500: #6b7280;
-		--color-gray-600: #4b5563;
-		--color-gray-700: #374151;
-		--color-gray-800: #1f2937;
-		--color-gray-900: #111827;
+		--color-gray-50: #fafafa;
+		--color-gray-100: #f5f5f5;
+		--color-gray-200: #e5e5e5;
+		--color-gray-300: #d4d4d4;
+		--color-gray-400: #a3a3a3;
+		--color-gray-500: #737373;
+		--color-gray-600: #525252;
+		--color-gray-700: #404040;
+		--color-gray-800: #262626;
+		--color-gray-900: #171717;
 
-		/* Colors - Claude Code Brand (Orange/Coral) */
-		--color-claude-50: #fff7ed;
-		--color-claude-100: #ffedd5;
-		--color-claude-200: #fed7aa;
-		--color-claude-400: #fb923c;
-		--color-claude-500: #f97316;
-		--color-claude-600: #ea580c;
-		--color-claude-700: #c2410c;
-
-		/* Colors - Accent Amber (Warm complement) */
-		--color-amber-50: #fffbeb;
-		--color-amber-100: #fef3c7;
-		--color-amber-500: #f59e0b;
-		--color-amber-600: #d97706;
-
-		/* Colors - Accent Teal (Cool complement) */
-		--color-teal-50: #f0fdfa;
-		--color-teal-100: #ccfbf1;
-		--color-teal-500: #14b8a6;
-		--color-teal-600: #0d9488;
-
-		/* Colors - Semantic */
-		--color-background: var(--color-white);
-		--color-surface: var(--color-gray-50);
-		--color-surface-elevated: var(--color-white);
+		/* Semantic Colors */
+		--color-background: var(--color-gray-50);
+		--color-surface: var(--color-white);
 		--color-text-primary: var(--color-gray-900);
-		--color-text-secondary: var(--color-gray-700);
+		--color-text-secondary: var(--color-gray-600);
 		--color-text-muted: var(--color-gray-500);
-		--color-border: var(--color-gray-200);
-		--color-border-strong: var(--color-gray-300);
+		--color-border: var(--color-gray-900);
 
 		/* Typography - Font Families */
 		--font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -125,14 +121,14 @@ const {
 		/* Layout */
 		--container-max: 1200px;
 		--container-narrow: 800px;
-		--border-radius: 0.5rem;
-		--border-radius-lg: 1rem;
+		--border-radius: 1.5rem; /* Soft, rounded corners */
+		--border-radius-lg: 2rem;
+		--border-width: 3px; /* Bold neobrutalist borders */
 
-		/* Shadows */
-		--shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-		--shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-		--shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-		--shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+		/* Shadows - Minimal, neobrutalist */
+		--shadow-brutal: 6px 6px 0 var(--color-gray-900); /* Hard shadow */
+		--shadow-brutal-sm: 4px 4px 0 var(--color-gray-900);
+		--shadow-brutal-lg: 8px 8px 0 var(--color-gray-900);
 
 		/* Transitions */
 		--transition-fast: 150ms ease-in-out;
@@ -199,23 +195,23 @@ const {
 	}
 
 	a {
-		color: var(--color-claude-600);
+		color: var(--color-primary);
 		text-decoration: none;
 		transition: color var(--transition-fast);
 	}
 
 	a:hover {
-		color: var(--color-claude-700);
+		color: var(--color-primary-dark);
 	}
 
 	code {
 		font-family: var(--font-mono);
 		font-size: 0.9em;
-		padding: 0.125rem 0.25rem;
-		background-color: var(--color-claude-50);
-		color: var(--color-claude-700);
-		border-radius: 0.25rem;
-		border: 1px solid var(--color-claude-200);
+		padding: 0.25rem 0.5rem;
+		background-color: var(--color-pastel-yellow);
+		color: var(--color-gray-900);
+		border-radius: 0.5rem;
+		border: 2px solid var(--color-gray-900);
 	}
 
 	/* =========================================
@@ -225,7 +221,7 @@ const {
 		position: absolute;
 		top: -40px;
 		left: 0;
-		background: var(--color-claude-600);
+		background: var(--color-primary);
 		color: white;
 		padding: var(--space-2) var(--space-4);
 		text-decoration: none;
@@ -237,15 +233,8 @@ const {
 	}
 
 	*:focus-visible {
-		outline: 3px solid var(--color-claude-600);
+		outline: 3px solid var(--color-primary);
 		outline-offset: 2px;
-	}
-
-	/* Section dividers */
-	.section-divider {
-		height: 1px;
-		background: linear-gradient(90deg, transparent, var(--color-border-strong), transparent);
-		margin: 0;
 	}
 
 	/* Respect user motion preferences */

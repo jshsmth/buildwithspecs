@@ -48,7 +48,7 @@ mv spec-architect.md .claude/agents/
 
 <style>
 	.download-section {
-		background: var(--color-claude-600);
+		background: var(--color-primary);
 		text-align: center;
 		color: white;
 	}
@@ -83,18 +83,19 @@ mv spec-architect.md .claude/agents/
 	}
 
 	.what-you-get {
-		background: rgba(255, 255, 255, 0.95);
+		background: var(--color-white);
 		padding: var(--space-8);
-		border-radius: var(--border-radius-lg);
+		border-radius: var(--border-radius);
 		margin: var(--space-12) 0;
 		text-align: left;
-		box-shadow: var(--shadow-xl);
+		border: var(--border-width) solid var(--color-border);
+		box-shadow: var(--shadow-brutal-lg);
 	}
 
 	.what-you-get h3 {
 		text-align: center;
 		margin-bottom: var(--space-6);
-		color: var(--color-claude-700);
+		color: var(--color-primary);
 	}
 
 	.what-you-get ul {
@@ -115,18 +116,18 @@ mv spec-architect.md .claude/agents/
 	}
 
 	.installation-snippet {
-		background: rgba(255, 255, 255, 0.95);
+		background: var(--color-white);
 		padding: var(--space-8);
-		border-radius: var(--border-radius-lg);
-		border: 2px solid rgba(255, 255, 255, 0.3);
+		border-radius: var(--border-radius);
+		border: var(--border-width) solid var(--color-border);
 		text-align: left;
-		box-shadow: var(--shadow-xl);
+		box-shadow: var(--shadow-brutal-lg);
 	}
 
 	.installation-snippet h4 {
 		text-align: center;
 		margin-bottom: var(--space-6);
-		color: var(--color-cyan-700);
+		color: var(--color-gray-900);
 	}
 
 	.installation-snippet pre {
@@ -135,6 +136,7 @@ mv spec-architect.md .claude/agents/
 		background: var(--color-gray-900);
 		border-radius: var(--border-radius);
 		overflow-x: auto;
+		border: var(--border-width) solid var(--color-border);
 	}
 
 	.installation-snippet code {
