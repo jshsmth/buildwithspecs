@@ -3,6 +3,23 @@ import Button from './Button.astro';
 ---
 
 <section class="hero" id="main-content">
+	<!-- Decorative Background Elements -->
+	<svg class="hero-decoration deco-top-left" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+		<path fill="#DDD6FE" fill-opacity="0.3" d="M47.4,-62.9C59.9,-53.3,67.4,-37.5,71.4,-21.2C75.4,-4.9,75.9,11.9,70.1,26.8C64.3,41.7,52.2,54.7,37.8,63.2C23.4,71.7,6.7,75.7,-9.9,72.3C-26.5,68.9,-43,58.1,-54.9,44.7C-66.8,31.3,-74.1,15.6,-74.8,-0.4C-75.5,-16.4,-69.6,-32.8,-59.4,-44.7C-49.2,-56.6,-34.7,-64,-19.5,-68.8C-4.3,-73.6,11.6,-75.8,24.8,-71.7C38,-67.6,48.5,-57.2,47.4,-62.9Z" transform="translate(100 100)" />
+	</svg>
+
+	<svg class="hero-decoration deco-top-right" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+		<path fill="#F5D0FE" fill-opacity="0.3" d="M38.4,-53.3C48.9,-43.2,56.3,-30.9,61.2,-17.2C66.1,-3.5,68.5,11.6,64.4,24.9C60.3,38.2,49.7,49.7,37.1,57.7C24.5,65.7,10,70.2,-5.2,69.5C-20.4,68.8,-36.5,63,-48.8,52.8C-61.1,42.6,-69.6,28,-72.4,12.3C-75.2,-3.4,-72.3,-20.2,-64.2,-34.5C-56.1,-48.8,-42.8,-60.6,-28,-67.7C-13.2,-74.8,2.1,-77.2,15.7,-72.8C29.3,-68.4,41.2,-57.2,38.4,-53.3Z" transform="translate(100 100)" />
+	</svg>
+
+	<svg class="hero-decoration deco-bottom-left" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+		<path fill="#C4B5FD" fill-opacity="0.3" d="M41.3,-55.8C52.8,-46.3,60.8,-32.9,65.2,-18.2C69.6,-3.5,70.4,12.5,65.6,26.4C60.8,40.3,50.4,52.1,37.5,59.5C24.6,66.9,9.2,69.9,-6.1,68.3C-21.4,66.7,-36.6,60.5,-48.7,50.6C-60.8,40.7,-69.8,27.1,-72.6,12.4C-75.4,-2.3,-72,-18.1,-64.1,-31.3C-56.2,-44.5,-43.8,-55.1,-30.3,-63.5C-16.8,-71.9,-2.2,-78.1,10.9,-75.8C24,-73.5,36.8,-62.7,41.3,-55.8Z" transform="translate(100 100)" />
+	</svg>
+
+	<svg class="hero-decoration deco-bottom-right" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+		<path fill="#E9D5FF" fill-opacity="0.3" d="M43.7,-59.2C55.5,-50.1,63.5,-35.8,67.9,-20.3C72.3,-4.8,73.1,11.9,68.5,26.7C63.9,41.5,54,54.4,41.5,62.7C29,71,14,74.7,-1.8,73.9C-17.6,73.1,-34.4,67.8,-47.3,58.1C-60.2,48.4,-69.2,34.3,-72.6,18.7C-76,-3,-73.8,-26.2,-65.3,-44.9C-56.8,-63.6,-42,-77.8,-25.8,-82.5C-9.6,-87.2,8,-82.4,22.8,-72.9C37.6,-63.4,49.6,-49.2,43.7,-59.2Z" transform="translate(100 100)" />
+	</svg>
+
 	<div class="container">
 		<div class="hero-grid">
 			<div class="hero-content">
@@ -14,7 +31,18 @@ import Button from './Button.astro';
 				</div>
 
 				<h1 class="hero-title">
-					Build Better Software with<br /><span class="highlight-text">Spec-Driven Development</span>
+					Build Better Software with<br />
+					<span class="highlight-text">
+						Spec-Driven Development
+						<span class="ghost-container">
+							<svg class="ghost-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12 2C8.69 2 6 4.69 6 8V15C6 15.55 6.45 16 7 16C7.55 16 8 15.55 8 15V8C8 5.79 9.79 4 12 4C14.21 4 16 5.79 16 8V15C16 15.55 16.45 16 17 16C17.55 16 18 15.55 18 15V8C18 4.69 15.31 2 12 2Z" fill="currentColor"/>
+								<path d="M18 14V20C18 20.55 17.55 21 17 21C16.45 21 16 21.45 16 22C16 22.55 15.55 23 15 23C14.45 23 14 22.55 14 22C14 21.45 13.55 21 13 21C12.45 21 12 21.45 12 22C12 22.55 11.55 23 11 23C10.45 23 10 22.55 10 22C10 21.45 9.55 21 9 21C8.45 21 8 21.45 8 22C8 22.55 7.55 23 7 23C6.45 23 6 22.55 6 22C6 21.45 5.55 21 5 21C4.45 21 4 20.55 4 20V14C4 13.45 4.45 13 5 13C5.55 13 6 13.45 6 14V15C6 15.55 6.45 16 7 16C7.55 16 8 15.55 8 15V14C8 13.45 8.45 13 9 13C9.55 13 10 13.45 10 14V15C10 15.55 10.45 16 11 16C11.55 16 12 15.55 12 15V14C12 13.45 12.45 13 13 13C13.55 13 14 13.45 14 14V15C14 15.55 14.45 16 15 16C15.55 16 16 15.55 16 15V14C16 13.45 16.45 13 17 13C17.55 13 18 13.45 18 14Z" fill="currentColor"/>
+								<circle cx="9.5" cy="9" r="1.5" fill="#1a1a1a"/>
+								<circle cx="14.5" cy="9" r="1.5" fill="#1a1a1a"/>
+							</svg>
+						</span>
+					</span>
 				</h1>
 
 				<p class="hero-subtitle">
@@ -127,12 +155,48 @@ import Button from './Button.astro';
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: var(--space-32) 0;
-		background: var(--color-pastel-purple);
+		padding: calc(var(--space-32) + 40px) 0;
+		background: radial-gradient(ellipse at center, #E5D4ED 0%, #D4C4DD 100%);
 		text-align: center;
 		position: relative;
 		overflow: hidden;
 		border-bottom: var(--border-width) solid var(--color-border);
+	}
+
+	/* Decorative Background Shapes */
+	.hero-decoration {
+		position: absolute;
+		pointer-events: none;
+		z-index: 0;
+		opacity: 1;
+	}
+
+	.deco-top-left {
+		width: 400px;
+		height: 400px;
+		top: -50px;
+		left: -100px;
+	}
+
+	.deco-top-right {
+		width: 450px;
+		height: 450px;
+		top: -80px;
+		right: -120px;
+	}
+
+	.deco-bottom-left {
+		width: 380px;
+		height: 380px;
+		bottom: -100px;
+		left: -80px;
+	}
+
+	.deco-bottom-right {
+		width: 420px;
+		height: 420px;
+		bottom: -120px;
+		right: -100px;
 	}
 
 	.container {
@@ -143,7 +207,7 @@ import Button from './Button.astro';
 	.hero-grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: var(--space-20);
+		gap: calc(var(--space-20) + 60px);
 		align-items: center;
 	}
 
@@ -154,7 +218,7 @@ import Button from './Button.astro';
 	.hero-visual {
 		display: flex;
 		flex-direction: column;
-		gap: var(--space-8);
+		gap: var(--space-12);
 	}
 
 	.hero-badge {
@@ -169,6 +233,7 @@ import Button from './Button.astro';
 		font-weight: 700;
 		margin-bottom: var(--space-8);
 		box-shadow: var(--shadow-brutal-sm);
+		animation: fadeIn 0.6s ease-out both;
 	}
 
 	.hero-badge svg {
@@ -176,23 +241,40 @@ import Button from './Button.astro';
 	}
 
 	.hero-title {
-		font-size: clamp(1.25rem, 3vw, 1.75rem);
-		line-height: 1.3;
-		margin-bottom: var(--space-3);
+		font-size: clamp(1.5rem, 3.5vw, 2rem);
+		line-height: 1.2;
+		margin-bottom: var(--space-4);
 		font-weight: 700;
 		letter-spacing: -0.01em;
-		color: var(--color-gray-700);
+		color: var(--color-gray-800);
+		animation: fadeInUp 0.6s ease-out 0.15s both;
 	}
 
 	.highlight-text {
 		display: block;
-		font-size: clamp(2.5rem, 6vw, 4rem);
+		font-size: clamp(3.5rem, 8vw, 5.5rem);
 		font-weight: 900;
-		line-height: 1.1;
-		letter-spacing: -0.03em;
+		line-height: 1;
+		letter-spacing: -0.04em;
 		color: var(--color-gray-900);
-		margin-top: var(--space-4);
-		margin-bottom: var(--space-8);
+		margin-top: var(--space-2);
+		margin-bottom: var(--space-10);
+		animation: fadeInUp 0.6s ease-out 0.3s both;
+		position: relative;
+	}
+
+	.ghost-container {
+		position: absolute;
+		top: -40px;
+		right: -20px;
+		display: inline-block;
+		animation: ghostFloat 3s ease-in-out infinite, ghostAppear 0.8s ease-out 1s both;
+	}
+
+	.ghost-icon {
+		color: rgba(255, 255, 255, 0.95);
+		filter: drop-shadow(0 4px 12px rgba(124, 58, 237, 0.4));
+		transform-origin: center bottom;
 	}
 
 	.hero-subtitle {
@@ -201,18 +283,20 @@ import Button from './Button.astro';
 		color: var(--color-text-secondary);
 		margin-bottom: var(--space-12);
 		max-width: 600px;
+		animation: fadeInUp 0.6s ease-out 0.45s both;
 	}
 
 	/* Workflow Card */
 	.workflow-card {
 		background: var(--color-white);
 		border: var(--border-width) solid var(--color-border);
-		border-radius: var(--border-radius);
-		box-shadow: var(--shadow-brutal-lg);
+		border-radius: 16px;
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), var(--shadow-brutal-lg);
 		padding: var(--space-8);
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-3);
+		animation: slideInRight 0.8s ease-out 0.6s both;
 	}
 
 	.workflow-step {
@@ -284,14 +368,28 @@ import Button from './Button.astro';
 	}
 
 	.mini-stat {
-		background: var(--color-white);
+		background: rgba(255, 255, 255, 0.7);
+		backdrop-filter: blur(8px);
 		border: var(--border-width) solid var(--color-border);
-		border-radius: var(--border-radius);
-		padding: var(--space-3) var(--space-4);
+		border-radius: 12px;
+		padding: 20px var(--space-4);
 		font-size: var(--text-sm);
 		font-weight: 600;
 		color: var(--color-gray-700);
 		box-shadow: var(--shadow-brutal-sm);
+		animation: fadeIn 0.6s ease-out both;
+	}
+
+	.mini-stat:nth-child(1) {
+		animation-delay: 0.9s;
+	}
+
+	.mini-stat:nth-child(2) {
+		animation-delay: 1.05s;
+	}
+
+	.mini-stat:nth-child(3) {
+		animation-delay: 1.2s;
 	}
 
 	.mini-value {
@@ -305,6 +403,7 @@ import Button from './Button.astro';
 		gap: var(--space-4);
 		flex-wrap: wrap;
 		margin-bottom: var(--space-8);
+		animation: fadeInUp 0.6s ease-out 0.6s both;
 	}
 
 	.hero-note {
@@ -313,6 +412,7 @@ import Button from './Button.astro';
 		gap: var(--space-2);
 		font-size: var(--text-sm);
 		color: var(--color-text-secondary);
+		animation: fadeIn 0.6s ease-out 0.75s both;
 	}
 
 	.hero-note svg {
@@ -353,6 +453,61 @@ import Button from './Button.astro';
 	@media (max-width: 640px) {
 		.hero-cta {
 			flex-direction: column;
+		}
+	}
+
+	/* Animations */
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes slideInRight {
+		from {
+			opacity: 0;
+			transform: translateX(50px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes ghostFloat {
+		0%, 100% {
+			transform: translateY(0px) rotate(-5deg);
+		}
+		50% {
+			transform: translateY(-15px) rotate(5deg);
+		}
+	}
+
+	@keyframes ghostAppear {
+		0% {
+			opacity: 0;
+			transform: translateY(20px) scale(0.5);
+		}
+		60% {
+			transform: translateY(-10px) scale(1.1);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0) scale(1);
 		}
 	}
 </style>
