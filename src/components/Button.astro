@@ -49,8 +49,9 @@ const Element = href ? 'a' : 'button';
 	}
 
 	.btn-primary:hover {
+		background: var(--color-primary);
 		transform: translate(2px, 2px);
-		box-shadow: 4px 4px 0 var(--color-gray-900);
+		box-shadow: 6px 6px 0 var(--color-gray-900);
 	}
 
 	.btn-primary:active {
@@ -71,16 +72,18 @@ const Element = href ? 'a' : 'button';
 	}
 
 	.btn-outline {
-		background: var(--color-white);
+		background: transparent;
 		color: var(--color-gray-900);
-		border-color: var(--color-border);
-		box-shadow: var(--shadow-brutal-sm);
+		border-color: var(--color-gray-900);
+		border-width: 2px;
+		box-shadow: none;
 	}
 
 	.btn-outline:hover {
-		background: var(--color-pastel-blue);
-		transform: translate(2px, 2px);
-		box-shadow: 4px 4px 0 var(--color-gray-900);
+		background: var(--color-gray-900);
+		color: white;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 	}
 
 	/* Sizes */
@@ -95,8 +98,9 @@ const Element = href ? 'a' : 'button';
 	}
 
 	.btn-lg {
-		padding: var(--space-4) var(--space-8);
+		padding: var(--space-5) var(--space-10);
 		font-size: var(--text-lg);
+		font-weight: 800;
 	}
 
 	/* Touch targets for mobile */

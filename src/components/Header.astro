@@ -1,11 +1,15 @@
 ---
 // Header Component - Navigation bar
+import Logo from './Logo.astro';
 ---
 
 <header class="header">
 	<div class="container">
 		<div class="header-content">
-			<a href="/" class="logo">Build with Spec</a>
+			<a href="/" class="logo">
+				<Logo width="36" height="36" />
+				<span class="logo-text">Build with Spec</span>
+			</a>
 
 			<nav class="nav">
 				<a href="#what-is-sdd" class="nav-link">Overview</a>
@@ -18,7 +22,7 @@
 
 <style>
 	.header {
-		background: radial-gradient(ellipse at center, #E5D4ED 0%, #D4C4DD 100%);
+		background: #E5D4ED;
 		border-bottom: var(--border-width) solid var(--color-border);
 		position: sticky;
 		top: 0;
@@ -34,14 +38,26 @@
 	}
 
 	.logo {
+		display: flex;
+		align-items: center;
+		gap: var(--space-3);
 		font-size: var(--text-xl);
 		font-weight: 900;
 		color: var(--color-gray-900);
 		text-decoration: none;
 		letter-spacing: -0.02em;
+		transition: transform var(--transition-fast);
 	}
 
 	.logo:hover {
+		transform: translateY(-2px);
+	}
+
+	.logo:hover .logo-text {
+		color: var(--color-primary);
+	}
+
+	.logo svg {
 		color: var(--color-primary);
 	}
 
