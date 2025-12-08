@@ -164,7 +164,11 @@ const {} = Astro.props;
 		align-items: center;
 		justify-content: center;
 		padding: var(--space-16) 0 var(--space-16) 0;
-		background: #E5D4ED;
+		background:
+			radial-gradient(circle at center, rgba(0, 0, 0, 0.12) 1.5px, transparent 1.5px),
+			linear-gradient(180deg, #E5D4ED 0%, #D8C8E3 100%);
+		background-size: 32px 32px, 100% 100%;
+		background-position: 0 0, 0 0;
 		text-align: center;
 		position: relative;
 		overflow: hidden;
@@ -238,7 +242,7 @@ const {} = Astro.props;
 		right: 23%;
 		display: inline-block;
 		z-index: -1;
-		animation: ghostFloat 3s ease-in-out infinite, ghostAppear 0.8s ease-out 1s both;
+		animation: ghostFloat 3s ease-in-out infinite;
 	}
 
 	.ghost-icon {
@@ -249,9 +253,9 @@ const {} = Astro.props;
 
 	.hero-subtitle {
 		font-size: var(--text-lg);
-		line-height: 1.6;
+		line-height: 1.8;
 		color: #4a4a5e;
-		margin-bottom: var(--space-10);
+		margin-bottom: var(--space-12);
 	}
 
 	/* Journey Path - Cleaner vertical timeline */
@@ -277,7 +281,7 @@ const {} = Astro.props;
 		display: flex;
 		align-items: flex-start;
 		gap: var(--space-4);
-		margin-bottom: var(--space-12);
+		margin-bottom: var(--space-16);
 		z-index: 1;
 	}
 
@@ -390,9 +394,9 @@ const {} = Astro.props;
 	}
 
 	.stat-item strong {
-		font-weight: 900;
+		font-weight: 950;
 		color: var(--color-primary);
-		font-size: var(--text-xl);
+		font-size: var(--text-2xl);
 	}
 
 	.stat-divider {
