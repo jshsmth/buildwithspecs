@@ -21,14 +21,6 @@ import Button from './Button.astro';
 		</div>
 	</div>
 
-	<div class="hero-decoration shape-3">
-		<div class="shape-circle">
-			<svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-				<path d="M3 1.75V21.75H21V1.75H3ZM7.25 12H12.75V13.5H7.25V12ZM16.75 17.5H7.25V16H16.75V17.5ZM19.25 9H13.75V3.5H15.25V7.5H19.25V9Z"/>
-			</svg>
-		</div>
-	</div>
-
 	<div class="hero-decoration shape-4">
 		<div class="shape-circle">
 			<svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -84,20 +76,74 @@ import Button from './Button.astro';
 			</div>
 
 			<div class="hero-visual">
-				<div class="stats-card">
-					<div class="stat-item">
-						<div class="stat-value">10x</div>
-						<div class="stat-label">Faster Planning</div>
+				<div class="workflow-card">
+					<div class="workflow-step">
+						<div class="step-icon requirements">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17.47 3.4502V6.7802H6.54V3.4502H2.75V21.9402H21.25V3.4502H17.47ZM9.17 11.8202L9.62 12.4102L10.89 14.0602L14.99 10.1902L16.02 11.2802L15.47 11.8002L11.31 15.7202L10.71 16.2802L8.44 13.3302L7.98 12.7302L9.17 11.8202Z"/>
+								<path d="M15.97 4.0998V5.2798H8.03003V4.1098H9.55003L9.76003 3.6998L10.59 2.0498H13.43L14.24 3.6798L14.44 4.0798H14.9L15.97 4.0998Z"/>
+							</svg>
+						</div>
+						<div class="step-info">
+							<div class="step-title">Requirements</div>
+							<div class="step-desc">Define goals & scope</div>
+						</div>
 					</div>
-					<div class="stat-divider"></div>
-					<div class="stat-item">
-						<div class="stat-value">85%</div>
-						<div class="stat-label">Fewer Rewrites</div>
+
+					<div class="workflow-step">
+						<div class="step-icon design">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path d="M14.8397 8.90027L15.1597 12.1803C17.6797 9.06027 20.4697 4.55027 21.1297 3.44027L20.9797 2.69027L20.2297 2.53027C19.1297 3.20027 14.5597 6.02027 11.4297 8.56027L14.8297 8.89027L14.8397 8.90027Z"/>
+								<path d="M4.12043 14.8699C5.42043 13.5699 7.55043 13.5799 8.87043 14.8999C10.1904 16.2199 10.2004 18.3499 8.90043 19.6499C8.69043 19.8599 8.47043 20.0199 8.24043 20.1599C7.81043 20.4199 7.34043 20.5699 6.85043 20.5999L6.53043 20.6199L2.94043 20.8299L3.15043 17.2599L3.18043 16.8699C3.22043 16.3999 3.37043 15.9399 3.61043 15.5299C3.75043 15.2899 3.91043 15.0799 4.12043 14.8699Z"/>
+								<path d="M13.4602 10.2797L9.89016 9.92969L7.66016 12.5797C7.77016 12.6097 8.73016 12.7197 9.88016 13.8697C10.9002 14.8897 11.0902 15.8197 11.1402 15.9997L13.8002 13.7297L13.4602 10.2697V10.2797Z"/>
+							</svg>
+						</div>
+						<div class="step-info">
+							<div class="step-title">Design</div>
+							<div class="step-desc">Plan architecture</div>
+						</div>
 					</div>
-					<div class="stat-divider"></div>
-					<div class="stat-item">
-						<div class="stat-value">100%</div>
-						<div class="stat-label">Team Aligned</div>
+
+					<div class="workflow-step">
+						<div class="step-icon tasks">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.4" d="M15 2H2V22H22V11.98" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="square"/>
+								<path d="M9 11.0002L11.67 13.8802L21 5.24023" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+							</svg>
+						</div>
+						<div class="step-info">
+							<div class="step-title">Tasks</div>
+							<div class="step-desc">Break down work</div>
+						</div>
+					</div>
+
+					<div class="workflow-step">
+						<div class="step-icon build">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path d="M18.3844 5.88828L13.668 1.17188L4.50387 10.336L9.22027 15.0524L18.3844 5.88828Z"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M7.17969 6.93934L12.6804 12.44L11.6197 13.5007L6.11903 8L7.17969 6.93934Z"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M11.3281 2.77918L16.8288 8.27985L15.7681 9.34051L10.2675 3.83984L11.3281 2.77918Z"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M1.25 21.25H14.51V22.75H1.25V21.25Z"/>
+								<path d="M3 20.9999L4.38 18.6699H11.4L12.77 20.9999"/>
+								<path d="M12.4102 12.5899L21.5901 18.0699L15.8302 9.16992"/>
+							</svg>
+						</div>
+						<div class="step-info">
+							<div class="step-title">Build</div>
+							<div class="step-desc">AI implements it</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="stats-mini">
+					<div class="mini-stat">
+						<span class="mini-value">10x</span> faster planning
+					</div>
+					<div class="mini-stat">
+						<span class="mini-value">85%</span> fewer rewrites
+					</div>
+					<div class="mini-stat">
+						<span class="mini-value">100%</span> team aligned
 					</div>
 				</div>
 			</div>
@@ -116,6 +162,7 @@ import Button from './Button.astro';
 		text-align: center;
 		position: relative;
 		overflow: hidden;
+		border-bottom: var(--border-width) solid var(--color-border);
 	}
 
 	/* Decorative Shapes */
@@ -142,8 +189,8 @@ import Button from './Button.astro';
 
 	/* Top Left - Shapes (Pink) */
 	.shape-1 {
-		top: 10%;
-		left: 5%;
+		top: 8%;
+		left: 3%;
 	}
 
 	.shape-1 .shape-circle svg {
@@ -152,28 +199,18 @@ import Button from './Button.astro';
 
 	/* Top Right - Code (Blue) */
 	.shape-2 {
-		top: 15%;
-		right: 8%;
+		top: 5%;
+		right: 5%;
 	}
 
 	.shape-2 .shape-circle svg {
 		color: var(--color-pastel-blue);
 	}
 
-	/* Bottom Left - Document (Yellow) */
-	.shape-3 {
-		bottom: 20%;
-		left: 8%;
-	}
-
-	.shape-3 .shape-circle svg {
-		color: var(--color-pastel-yellow);
-	}
-
 	/* Bottom Right - Hierarchy (Green) */
 	.shape-4 {
-		bottom: 15%;
-		right: 6%;
+		bottom: 5%;
+		right: 10%;
 	}
 
 	.shape-4 .shape-circle svg {
@@ -198,8 +235,8 @@ import Button from './Button.astro';
 
 	.hero-visual {
 		display: flex;
-		align-items: center;
-		justify-content: center;
+		flex-direction: column;
+		gap: var(--space-6);
 	}
 
 	.hero-badge {
@@ -221,64 +258,128 @@ import Button from './Button.astro';
 	}
 
 	.hero-title {
-		font-size: clamp(2.25rem, 5vw, 3.5rem);
-		line-height: 1.1;
-		margin-bottom: var(--space-6);
-		font-weight: 900;
-		letter-spacing: -0.02em;
-		color: var(--color-gray-900);
+		font-size: clamp(1.25rem, 3vw, 1.75rem);
+		line-height: 1.3;
+		margin-bottom: var(--space-3);
+		font-weight: 700;
+		letter-spacing: -0.01em;
+		color: var(--color-gray-700);
 	}
 
 	.highlight-text {
+		display: block;
+		font-size: clamp(2.5rem, 6vw, 4rem);
+		font-weight: 900;
+		line-height: 1.1;
+		letter-spacing: -0.03em;
 		color: var(--color-primary);
-		position: relative;
+		margin-top: var(--space-4);
+		margin-bottom: var(--space-8);
 	}
 
 	.hero-subtitle {
 		font-size: var(--text-xl);
 		line-height: 1.7;
 		color: var(--color-text-secondary);
-		margin-bottom: var(--space-12);
-		max-width: 700px;
-		margin-left: auto;
-		margin-right: auto;
+		margin-bottom: var(--space-10);
+		max-width: 600px;
 	}
 
-	.stats-card {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-6);
-		padding: var(--space-10);
+	/* Workflow Card */
+	.workflow-card {
 		background: var(--color-white);
 		border: var(--border-width) solid var(--color-border);
 		border-radius: var(--border-radius);
 		box-shadow: var(--shadow-brutal-lg);
-		width: 100%;
-		max-width: 450px;
+		padding: var(--space-8);
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-4);
 	}
 
-	.stat-item {
-		text-align: center;
+	.workflow-step {
+		display: flex;
+		align-items: flex-start;
+		gap: var(--space-3);
 	}
 
-	.stat-value {
-		font-size: var(--text-4xl);
+	.step-icon {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		border: var(--border-width) solid var(--color-border);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+	}
+
+	.step-icon svg {
+		display: block;
+	}
+
+	.step-icon.requirements {
+		background: var(--color-pastel-pink);
+		color: var(--color-gray-900);
+	}
+
+	.step-icon.design {
+		background: var(--color-pastel-blue);
+		color: var(--color-gray-900);
+	}
+
+	.step-icon.tasks {
+		background: var(--color-pastel-yellow);
+		color: var(--color-gray-900);
+	}
+
+	.step-icon.build {
+		background: var(--color-pastel-green);
+		color: var(--color-gray-900);
+	}
+
+	.step-info {
+		flex: 1;
+		padding-top: var(--space-2);
+	}
+
+	.step-title {
+		font-size: var(--text-xl);
 		font-weight: 900;
 		color: var(--color-gray-900);
-		line-height: 1;
-		margin-bottom: var(--space-2);
+		line-height: 1.2;
+		margin-bottom: var(--space-1);
 	}
 
-	.stat-label {
-		font-size: var(--text-sm);
+	.step-desc {
+		font-size: var(--text-base);
 		color: var(--color-text-secondary);
-		font-weight: 600;
+		font-weight: 500;
+		line-height: 1.5;
 	}
 
-	.stat-divider {
-		width: 100%;
-		height: 3px;
-		background: var(--color-border);
+	/* Mini Stats */
+	.stats-mini {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-3);
+	}
+
+	.mini-stat {
+		background: var(--color-white);
+		border: var(--border-width) solid var(--color-border);
+		border-radius: var(--border-radius);
+		padding: var(--space-3) var(--space-4);
+		font-size: var(--text-sm);
+		font-weight: 600;
+		color: var(--color-gray-700);
+		box-shadow: var(--shadow-brutal-sm);
+	}
+
+	.mini-value {
+		font-weight: 900;
+		color: var(--color-gray-900);
+		font-size: var(--text-lg);
 	}
 
 	.hero-cta {
@@ -320,8 +421,14 @@ import Button from './Button.astro';
 			justify-content: center;
 		}
 
-		.stats-card {
-			max-width: 100%;
+		.workflow-card {
+			padding: var(--space-6);
+		}
+
+		.step-icon {
+			width: 40px;
+			height: 40px;
+			font-size: var(--text-lg);
 		}
 
 		.shape-circle {
@@ -342,11 +449,6 @@ import Button from './Button.astro';
 		.shape-2 {
 			top: 12%;
 			right: 5%;
-		}
-
-		.shape-3 {
-			bottom: 18%;
-			left: 5%;
 		}
 
 		.shape-4 {
@@ -378,11 +480,6 @@ import Button from './Button.astro';
 		.shape-2 {
 			top: 8%;
 			right: 2%;
-		}
-
-		.shape-3 {
-			bottom: 12%;
-			left: 2%;
 		}
 
 		.shape-4 {

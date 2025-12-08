@@ -1,5 +1,6 @@
 ---
-// HowToStart Section - Getting started guide
+// HowToStart Section - Getting started guide with download
+import Button from './Button.astro';
 ---
 
 <section class="section how-to-start" id="how-to-start">
@@ -69,6 +70,33 @@
 		<div class="pro-tip">
 			<h4>💡 Pro Tip</h4>
 			<p>Start with a small, well-defined feature for your first spec. As you get comfortable with the process, tackle larger projects. The agent scales from quick fixes to multi-week initiatives.</p>
+		</div>
+
+		<!-- Download CTA -->
+		<div class="download-cta" id="download">
+			<h3>Ready to Get Started?</h3>
+			<p class="download-intro">
+				Download the free Spec Architect agent and transform your workflow today.
+			</p>
+
+			<Button href="/downloads/spec-architect.md" variant="primary" size="lg">
+				<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+					<polyline points="7 10 12 15 17 10"></polyline>
+					<line x1="12" y1="15" x2="12" y2="3"></line>
+				</svg>
+				Download spec-architect.md
+			</Button>
+			<p class="file-info">Free • 29KB • No signup required</p>
+
+			<div class="support-note">
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+				</svg>
+				<div>
+					<strong>Love this tool?</strong> Payment options coming soon. For now, it's completely free with no restrictions.
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
@@ -168,6 +196,57 @@
 		font-size: var(--text-lg);
 		margin-bottom: 0;
 		line-height: 1.7;
+	}
+
+	/* Download CTA */
+	.download-cta {
+		margin-top: var(--space-16);
+		text-align: center;
+		padding: var(--space-12);
+		background: var(--color-white);
+		border: var(--border-width) solid var(--color-border);
+		border-radius: var(--border-radius);
+		box-shadow: var(--shadow-brutal-lg);
+	}
+
+	.download-cta h3 {
+		font-size: var(--text-3xl);
+		margin-bottom: var(--space-4);
+		color: var(--color-gray-900);
+	}
+
+	.download-intro {
+		font-size: var(--text-xl);
+		color: var(--color-text-secondary);
+		margin-bottom: var(--space-8);
+	}
+
+	.file-info {
+		font-size: var(--text-sm);
+		color: var(--color-text-secondary);
+		margin-top: var(--space-3);
+	}
+
+	.support-note {
+		margin-top: var(--space-8);
+		padding: var(--space-4);
+		background: var(--color-pastel-yellow);
+		border-radius: var(--border-radius);
+		border: var(--border-width) solid var(--color-border);
+		display: flex;
+		align-items: center;
+		gap: var(--space-3);
+		font-size: var(--text-sm);
+		color: var(--color-gray-700);
+	}
+
+	.support-note svg {
+		color: var(--color-danger);
+		flex-shrink: 0;
+	}
+
+	.support-note strong {
+		color: var(--color-gray-900);
 	}
 
 	@media (max-width: 640px) {
