@@ -54,11 +54,18 @@ const {} = Astro.props;
 				</div>
 
 				<div class="hero-note">
-					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-						<circle cx="12" cy="12" r="10"></circle>
-						<path d="M12 16v-4"></path>
-						<path d="M12 8h.01"></path>
-					</svg>
+					<div class="info-tooltip-wrapper">
+						<button class="info-tooltip-trigger" aria-label="More information about requirements">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<circle cx="12" cy="12" r="10"></circle>
+								<path d="M12 16v-4"></path>
+								<path d="M12 8h.01"></path>
+							</svg>
+						</button>
+						<div class="info-tooltip-content">
+							A 5x or 20x Claude plan is recommended for best results with spec-driven development
+						</div>
+					</div>
 					Works with Claude Code • No signup required • 29KB download
 				</div>
 
@@ -408,11 +415,88 @@ const {} = Astro.props;
 		gap: var(--space-2);
 		font-size: var(--text-sm);
 		color: var(--color-text-secondary);
+		position: relative;
 	}
 
 	.hero-note svg {
 		color: var(--color-primary);
 		flex-shrink: 0;
+	}
+
+	.info-tooltip-wrapper {
+		position: relative;
+		display: inline-flex;
+		margin-left: var(--space-2);
+	}
+
+	.info-tooltip-trigger {
+		background: none;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--color-primary);
+		transition: all var(--transition-fast);
+		border-radius: 50%;
+	}
+
+	.info-tooltip-trigger:hover {
+		color: var(--color-primary-dark);
+		transform: scale(1.1);
+	}
+
+	.info-tooltip-trigger svg {
+		width: 20px;
+		height: 20px;
+	}
+
+	.info-tooltip-content {
+		position: absolute;
+		bottom: calc(100% + 8px);
+		left: 50%;
+		transform: translateX(-50%);
+		background: var(--color-gray-900);
+		color: var(--color-white);
+		padding: var(--space-4) var(--space-6);
+		border-radius: 12px;
+		font-size: var(--text-sm);
+		line-height: 1.6;
+		white-space: normal;
+		max-width: 450px;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity var(--transition-base);
+		z-index: var(--z-tooltip);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	}
+
+	.info-tooltip-content::after {
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		border: 6px solid transparent;
+		border-top-color: var(--color-gray-900);
+	}
+
+	@media (hover: hover) and (pointer: fine) {
+		.info-tooltip-trigger:hover + .info-tooltip-content,
+		.info-tooltip-content:hover {
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+
+	@media (hover: none) or (pointer: coarse) {
+		.info-tooltip-trigger:focus + .info-tooltip-content,
+		.info-tooltip-trigger:active + .info-tooltip-content,
+		.info-tooltip-trigger.active + .info-tooltip-content {
+			opacity: 1;
+			pointer-events: auto;
+		}
 	}
 
 	/* Responsive */
@@ -448,12 +532,51 @@ const {} = Astro.props;
 	}
 
 	@media (max-width: 768px) {
+		.hero {
+			overflow: visible;
+		}
+
 		.hero-right {
 			display: none;
 		}
 
 		.stats-inline {
 			display: none;
+		}
+
+		.ghost-container {
+			right: 3%;
+		}
+
+		.hero-note {
+			overflow: visible;
+		}
+
+		.info-tooltip-wrapper {
+			position: static;
+		}
+
+		.info-tooltip-content {
+			bottom: auto;
+			top: calc(100% + var(--space-3));
+			left: 50%;
+			right: auto;
+			transform: translateX(-50%);
+			max-width: calc(100vw - var(--space-8));
+			width: max-content;
+			padding: var(--space-3) var(--space-4);
+			font-size: var(--text-xs);
+			line-height: 1.4;
+			text-align: center;
+		}
+
+		.info-tooltip-content::after {
+			left: 50%;
+			transform: translateX(-50%);
+			top: -12px;
+			bottom: auto;
+			border-top-color: transparent;
+			border-bottom-color: var(--color-gray-900);
 		}
 	}
 
@@ -501,3 +624,22 @@ const {} = Astro.props;
 		}
 	}
 </style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const tooltipTrigger = document.querySelector('.info-tooltip-trigger');
+
+		if (tooltipTrigger) {
+			tooltipTrigger.addEventListener('click', (e) => {
+				e.preventDefault();
+				tooltipTrigger.classList.toggle('active');
+			});
+
+			document.addEventListener('click', (e) => {
+				if (!e.target.closest('.info-tooltip-wrapper')) {
+					tooltipTrigger.classList.remove('active');
+				}
+			});
+		}
+	});
+</script>
