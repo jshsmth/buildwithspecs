@@ -1,6 +1,6 @@
 ---
-import Logo from './Logo.astro';
-import Button from './Button.astro';
+import Logo from '../common/Logo.astro';
+import Button from '../common/Button.astro';
 ---
 
 <header class="header">
@@ -22,7 +22,7 @@ import Button from './Button.astro';
 
 <style>
 	.header {
-		background: #E5D4ED;
+		background: var(--color-pastel-purple);
 		border-bottom: var(--border-width) solid var(--color-border);
 		position: sticky;
 		top: 0;

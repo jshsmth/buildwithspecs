@@ -1,5 +1,5 @@
 ---
-import DonationModal from '../components/DonationModal.astro';
+import DonationModal from '../components/modals/DonationModal.astro';
 
 interface Props {
 	title?: string;
@@ -131,10 +131,13 @@ const {
 		--container-max: 1200px;
 		--container-narrow: 800px;
 		--border-radius: 1.5rem; /* Soft, rounded corners */
+		--border-radius-sm: 0.5rem;
+		--border-radius-md: 1rem;
 		--border-radius-lg: 2rem;
 		--border-width: 3px; /* Bold neobrutalist borders */
 
 		/* Shadows */
+		--shadow-sm: 2px 2px 0 var(--color-gray-900);
 		--shadow-brutal: 6px 6px 0 var(--color-gray-900);
 		--shadow-brutal-sm: 4px 4px 0 var(--color-gray-900);
 		--shadow-brutal-xs: 2px 2px 0 var(--color-gray-900);
@@ -156,6 +159,12 @@ const {
 		--transition-fast: 150ms ease-in-out;
 		--transition-base: 250ms ease-in-out;
 		--transition-slow: 350ms ease-in-out;
+
+		/* Breakpoints (for reference - use in media queries) */
+		--breakpoint-sm: 640px;
+		--breakpoint-md: 768px;
+		--breakpoint-lg: 1024px;
+		--breakpoint-xl: 1280px;
 	}
 
 	/* =========================================

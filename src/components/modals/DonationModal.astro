@@ -1,4 +1,5 @@
 ---
+import BuyMeCoffeeButton from '../common/BuyMeCoffeeButton.astro';
 ---
 
 <div id="donation-modal" class="modal-backdrop" aria-hidden="true">
@@ -30,7 +31,7 @@
 				<p class="support-message">
 					If you find this useful, consider supporting the project
 				</p>
-				<div id="bmc-button-container"></div>
+				<BuyMeCoffeeButton />
 			</div>
 
 			<button class="continue-btn">Continue browsing</button>
@@ -44,35 +45,11 @@
 		const closeBtn = modal?.querySelector('.modal-close');
 		const continueBtn = modal?.querySelector('.continue-btn');
 		const downloadLinks = document.querySelectorAll('a[download*=".md"]');
-		let bmcScriptLoaded = false;
-
-		function loadBuyMeCoffeeButton() {
-			if (bmcScriptLoaded) return;
-
-			const container = document.getElementById('bmc-button-container');
-			if (!container) return;
-
-			const script = document.createElement('script');
-			script.src = 'https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js';
-			script.setAttribute('data-name', 'bmc-button');
-			script.setAttribute('data-slug', 'joshua.smith');
-			script.setAttribute('data-color', '#c6ecd4');
-			script.setAttribute('data-emoji', '☕');
-			script.setAttribute('data-font', 'Lato');
-			script.setAttribute('data-text', 'Buy me a coffee');
-			script.setAttribute('data-outline-color', '#000000');
-			script.setAttribute('data-font-color', '#000000');
-			script.setAttribute('data-coffee-color', '#FFDD00');
-
-			container.appendChild(script);
-			bmcScriptLoaded = true;
-		}
 
 		function showModal() {
 			if (modal) {
 				modal.classList.add('active');
 				modal.setAttribute('aria-hidden', 'false');
-				loadBuyMeCoffeeButton();
 
 				const focusableElements = modal.querySelectorAll('button, a');
 				if (focusableElements.length > 0) {
