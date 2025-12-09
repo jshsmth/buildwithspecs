@@ -1,4 +1,6 @@
 ---
+import DonationModal from '../components/DonationModal.astro';
+
 interface Props {
 	title?: string;
 	description?: string;
@@ -46,6 +48,7 @@ const {
 	</head>
 	<body>
 		<slot />
+		<DonationModal />
 	</body>
 </html>
 

@@ -1,0 +1,283 @@
+---
+---
+
+<div id="donation-modal" class="modal-backdrop" aria-hidden="true">
+	<div class="modal-content" role="dialog" aria-labelledby="modal-title" aria-describedby="modal-description">
+		<button class="modal-close" aria-label="Close modal">
+			<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<line x1="18" y1="6" x2="6" y2="18"></line>
+				<line x1="6" y1="6" x2="18" y2="18"></line>
+			</svg>
+		</button>
+
+		<div class="modal-body">
+			<div class="modal-icon">
+				<svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<path d="M22 11.08V12a10 10 0 0 0 5.5 8.94M22 11.08A10 10 0 0 0 12 12v0M22 11.08V3M12 12a10 10 0 0 0 10 10v0"></path>
+					<circle cx="12" cy="12" r="2"></circle>
+					<path d="M12 12v6"></path>
+				</svg>
+			</div>
+
+			<h2 id="modal-title">Download Started!</h2>
+			<p id="modal-description">
+				Your spec-architect.md file is downloading. This free tool helps you build better software with AI.
+			</p>
+
+			<div class="modal-divider"></div>
+
+			<div class="support-section">
+				<p class="support-message">
+					If you find this useful, consider supporting the project
+				</p>
+				<div id="bmc-button-container"></div>
+			</div>
+
+			<button class="continue-btn">Continue browsing</button>
+		</div>
+	</div>
+</div>
+
+<script>
+	function initDownloadModal() {
+		const modal = document.getElementById('donation-modal');
+		const closeBtn = modal?.querySelector('.modal-close');
+		const continueBtn = modal?.querySelector('.continue-btn');
+		const downloadLinks = document.querySelectorAll('a[download*=".md"]');
+		let bmcScriptLoaded = false;
+
+		function loadBuyMeCoffeeButton() {
+			if (bmcScriptLoaded) return;
+
+			const container = document.getElementById('bmc-button-container');
+			if (!container) return;
+
+			const script = document.createElement('script');
+			script.src = 'https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js';
+			script.setAttribute('data-name', 'bmc-button');
+			script.setAttribute('data-slug', 'joshua.smith');
+			script.setAttribute('data-color', '#c6ecd4');
+			script.setAttribute('data-emoji', '☕');
+			script.setAttribute('data-font', 'Lato');
+			script.setAttribute('data-text', 'Buy me a coffee');
+			script.setAttribute('data-outline-color', '#000000');
+			script.setAttribute('data-font-color', '#000000');
+			script.setAttribute('data-coffee-color', '#FFDD00');
+
+			container.appendChild(script);
+			bmcScriptLoaded = true;
+		}
+
+		function showModal() {
+			if (modal) {
+				modal.classList.add('active');
+				modal.setAttribute('aria-hidden', 'false');
+				loadBuyMeCoffeeButton();
+
+				const focusableElements = modal.querySelectorAll('button, a');
+				if (focusableElements.length > 0) {
+					(focusableElements[0] as HTMLElement)?.focus();
+				}
+			}
+		}
+
+		function hideModal() {
+			if (modal) {
+				modal.classList.remove('active');
+				modal.setAttribute('aria-hidden', 'true');
+			}
+		}
+
+		downloadLinks.forEach(link => {
+			link.addEventListener('click', () => {
+				setTimeout(() => {
+					showModal();
+				}, 500);
+			});
+		});
+
+		closeBtn?.addEventListener('click', hideModal);
+		continueBtn?.addEventListener('click', hideModal);
+
+		modal?.addEventListener('click', (e) => {
+			if (e.target === modal) {
+				hideModal();
+			}
+		});
+
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape' && modal?.classList.contains('active')) {
+				hideModal();
+			}
+		});
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initDownloadModal);
+	} else {
+		initDownloadModal();
+	}
+</script>
+
+<style>
+	.modal-backdrop {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.5);
+		backdrop-filter: blur(4px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: var(--space-4);
+		z-index: var(--z-modal-backdrop);
+		opacity: 0;
+		visibility: hidden;
+		transition: all var(--transition-base);
+	}
+
+	.modal-backdrop.active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.modal-content {
+		background: var(--color-white);
+		border-radius: var(--border-radius);
+		border: var(--border-width) solid var(--color-border);
+		box-shadow: var(--shadow-brutal-lg);
+		max-width: 500px;
+		width: 100%;
+		position: relative;
+		transform: scale(0.9) translateY(20px);
+		transition: transform var(--transition-base);
+		z-index: var(--z-modal);
+	}
+
+	.modal-backdrop.active .modal-content {
+		transform: scale(1) translateY(0);
+	}
+
+	.modal-close {
+		position: absolute;
+		top: var(--space-4);
+		right: var(--space-4);
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		color: var(--color-gray-600);
+		transition: color var(--transition-fast);
+		padding: var(--space-2);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+	}
+
+	.modal-close:hover {
+		color: var(--color-gray-900);
+		background: var(--color-gray-100);
+	}
+
+	.modal-body {
+		padding: var(--space-10) var(--space-8) var(--space-8);
+		text-align: center;
+	}
+
+	.modal-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 80px;
+		height: 80px;
+		margin: 0 auto var(--space-6);
+		background: var(--color-pastel-green);
+		border-radius: 50%;
+		border: var(--border-width) solid var(--color-border);
+		box-shadow: var(--shadow-brutal-sm);
+	}
+
+	.modal-icon svg {
+		color: var(--color-gray-900);
+	}
+
+	.modal-body h2 {
+		font-size: var(--text-3xl);
+		margin-bottom: var(--space-3);
+		color: var(--color-gray-900);
+	}
+
+	.modal-body p {
+		font-size: var(--text-lg);
+		color: var(--color-text-secondary);
+		margin-bottom: var(--space-6);
+	}
+
+	.modal-divider {
+		height: 2px;
+		background: var(--color-gray-200);
+		margin: var(--space-6) 0;
+	}
+
+	.support-section {
+		margin: var(--space-6) 0;
+	}
+
+	.support-message {
+		font-size: var(--text-base);
+		color: var(--color-text-secondary);
+		margin-bottom: var(--space-4);
+	}
+
+	.continue-btn {
+		width: 100%;
+		padding: var(--space-4) var(--space-6);
+		background: var(--color-gray-100);
+		color: var(--color-gray-900);
+		border: var(--border-width) solid var(--color-border);
+		border-radius: var(--border-radius);
+		font-size: var(--text-base);
+		font-weight: 700;
+		cursor: pointer;
+		transition: all var(--transition-fast);
+		margin-top: var(--space-6);
+		font-family: var(--font-sans);
+	}
+
+	.continue-btn:hover {
+		background: var(--color-gray-200);
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-brutal-sm);
+	}
+
+	.continue-btn:active {
+		transform: translateY(0);
+		box-shadow: none;
+	}
+
+	@media (max-width: 640px) {
+		.modal-body {
+			padding: var(--space-8) var(--space-6) var(--space-6);
+		}
+
+		.modal-body h2 {
+			font-size: var(--text-2xl);
+		}
+
+		.modal-body p {
+			font-size: var(--text-base);
+		}
+
+		.modal-icon {
+			width: 64px;
+			height: 64px;
+		}
+
+		.modal-icon svg {
+			width: 32px;
+			height: 32px;
+		}
+	}
+</style>
