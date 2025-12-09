@@ -1,4 +1,5 @@
 ---
+import Analytics from '@vercel/analytics/astro';
 import DonationModal from '../components/modals/DonationModal.astro';
 
 interface Props {
@@ -49,6 +50,7 @@ const {
 	<body>
 		<slot />
 		<DonationModal />
+		<Analytics />
 	</body>
 </html>
 
