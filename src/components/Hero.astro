@@ -559,16 +559,20 @@ const {} = Astro.props;
 		.info-tooltip-content {
 			bottom: auto;
 			top: calc(100% + var(--space-3));
-			left: var(--space-4);
-			right: var(--space-4);
-			transform: none;
-			max-width: none;
-			width: auto;
+			left: 50%;
+			right: auto;
+			transform: translateX(-50%);
+			max-width: calc(100vw - var(--space-8));
+			width: max-content;
+			padding: var(--space-3) var(--space-4);
+			font-size: var(--text-xs);
+			line-height: 1.4;
+			text-align: center;
 		}
 
 		.info-tooltip-content::after {
-			left: var(--space-4);
-			transform: none;
+			left: 50%;
+			transform: translateX(-50%);
 			top: -12px;
 			bottom: auto;
 			border-top-color: transparent;
