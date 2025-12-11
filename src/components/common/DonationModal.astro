@@ -1,5 +1,6 @@
 ---
-import BuyMeCoffeeButton from '../common/BuyMeCoffeeButton.astro';
+import BuyMeCoffeeButton from './BuyMeCoffeeButton.astro';
+import Button from './Button.astro';
 ---
 
 <div id="donation-modal" class="modal-backdrop" aria-hidden="true">
@@ -12,7 +13,7 @@ import BuyMeCoffeeButton from '../common/BuyMeCoffeeButton.astro';
 		</button>
 
 		<div class="modal-body">
-			<div class="modal-icon">
+			<div class="modal-icon icon-circle icon-circle--lg">
 				<svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 					<path d="M22 11.08V12a10 10 0 0 0 5.5 8.94M22 11.08A10 10 0 0 0 12 12v0M22 11.08V3M12 12a10 10 0 0 0 10 10v0"></path>
 					<circle cx="12" cy="12" r="2"></circle>
@@ -34,65 +35,22 @@ import BuyMeCoffeeButton from '../common/BuyMeCoffeeButton.astro';
 				<BuyMeCoffeeButton />
 			</div>
 
-			<button class="continue-btn">Continue browsing</button>
+			<Button variant="secondary" size="lg" class="continue-btn">Continue browsing</Button>
 		</div>
 	</div>
 </div>
 
 <script>
-	function initDownloadModal() {
-		const modal = document.getElementById('donation-modal');
-		const closeBtn = modal?.querySelector('.modal-close');
-		const continueBtn = modal?.querySelector('.continue-btn');
-		const downloadLinks = document.querySelectorAll('a[download*=".md"]');
+	import { initDownloadModal } from '../../scripts/modal';
 
-		function showModal() {
-			if (modal) {
-				modal.classList.add('active');
-				modal.setAttribute('aria-hidden', 'false');
-
-				const focusableElements = modal.querySelectorAll('button, a');
-				if (focusableElements.length > 0) {
-					(focusableElements[0] as HTMLElement)?.focus();
-				}
-			}
-		}
-
-		function hideModal() {
-			if (modal) {
-				modal.classList.remove('active');
-				modal.setAttribute('aria-hidden', 'true');
-			}
-		}
-
-		downloadLinks.forEach(link => {
-			link.addEventListener('click', () => {
-				setTimeout(() => {
-					showModal();
-				}, 500);
-			});
-		});
-
-		closeBtn?.addEventListener('click', hideModal);
-		continueBtn?.addEventListener('click', hideModal);
-
-		modal?.addEventListener('click', (e) => {
-			if (e.target === modal) {
-				hideModal();
-			}
-		});
-
-		document.addEventListener('keydown', (e) => {
-			if (e.key === 'Escape' && modal?.classList.contains('active')) {
-				hideModal();
-			}
-		});
+	function init() {
+		initDownloadModal('donation-modal', 'a[download*=".md"]');
 	}
 
 	if (document.readyState === 'loading') {
-		document.addEventListener('DOMContentLoaded', initDownloadModal);
+		document.addEventListener('DOMContentLoaded', init);
 	} else {
-		initDownloadModal();
+		init();
 	}
 </script>
 
@@ -164,20 +122,8 @@ import BuyMeCoffeeButton from '../common/BuyMeCoffeeButton.astro';
 	}
 
 	.modal-icon {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 80px;
-		height: 80px;
 		margin: 0 auto var(--space-6);
 		background: var(--color-pastel-green);
-		border-radius: 50%;
-		border: var(--border-width) solid var(--color-border);
-		box-shadow: var(--shadow-brutal-sm);
-	}
-
-	.modal-icon svg {
-		color: var(--color-gray-900);
 	}
 
 	.modal-body h2 {
@@ -210,28 +156,8 @@ import BuyMeCoffeeButton from '../common/BuyMeCoffeeButton.astro';
 
 	.continue-btn {
 		width: 100%;
-		padding: var(--space-4) var(--space-6);
-		background: var(--color-gray-100);
-		color: var(--color-gray-900);
-		border: var(--border-width) solid var(--color-border);
-		border-radius: var(--border-radius);
-		font-size: var(--text-base);
-		font-weight: 700;
-		cursor: pointer;
-		transition: all var(--transition-fast);
 		margin-top: var(--space-6);
-		font-family: var(--font-sans);
-	}
-
-	.continue-btn:hover {
-		background: var(--color-gray-200);
-		transform: translateY(-2px);
-		box-shadow: var(--shadow-brutal-sm);
-	}
-
-	.continue-btn:active {
-		transform: translateY(0);
-		box-shadow: none;
+		padding: var(--space-4) var(--space-6);
 	}
 
 	@media (max-width: 640px) {
@@ -245,16 +171,6 @@ import BuyMeCoffeeButton from '../common/BuyMeCoffeeButton.astro';
 
 		.modal-body p {
 			font-size: var(--text-base);
-		}
-
-		.modal-icon {
-			width: 64px;
-			height: 64px;
-		}
-
-		.modal-icon svg {
-			width: 32px;
-			height: 32px;
 		}
 	}
 </style>

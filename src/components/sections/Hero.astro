@@ -1,6 +1,6 @@
 ---
 import Button from "../common/Button.astro";
-import BackgroundDecorations from "../layout/BackgroundDecorations.astro";
+import BackgroundDecorations from "../decorations/BackgroundDecorations.astro";
 ---
 
 <section class="hero" id="main-content">
@@ -283,11 +283,11 @@ import BackgroundDecorations from "../layout/BackgroundDecorations.astro";
 
 <style>
     .hero {
-        min-height: 90vh;
+        min-height: calc(100dvh - 70px);
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: var(--space-16) 0 var(--space-16) 0;
+        padding: var(--space-8) 0;
         background:
             radial-gradient(
                 circle at center,
@@ -348,7 +348,7 @@ import BackgroundDecorations from "../layout/BackgroundDecorations.astro";
     }
 
     .hero-title {
-        font-size: clamp(1.5rem, 3.5vw, 2rem);
+        font-size: var(--text-hero-subtitle);
         line-height: 1.2;
         margin-bottom: var(--space-4);
         font-weight: 700;
@@ -358,7 +358,7 @@ import BackgroundDecorations from "../layout/BackgroundDecorations.astro";
 
     .highlight-text {
         display: block;
-        font-size: clamp(4rem, 10vw, 6.5rem);
+        font-size: var(--text-hero);
         font-weight: 900;
         line-height: 0.95;
         letter-spacing: -0.05em;
@@ -760,20 +760,9 @@ import BackgroundDecorations from "../layout/BackgroundDecorations.astro";
 </style>
 
 <script>
+    import { initTooltip } from '../../scripts/tooltip';
+
     document.addEventListener("DOMContentLoaded", () => {
-        const tooltipTrigger = document.querySelector(".info-tooltip-trigger");
-
-        if (tooltipTrigger) {
-            tooltipTrigger.addEventListener("click", (e) => {
-                e.preventDefault();
-                tooltipTrigger.classList.toggle("active");
-            });
-
-            document.addEventListener("click", (e) => {
-                if (!e.target.closest(".info-tooltip-wrapper")) {
-                    tooltipTrigger.classList.remove("active");
-                }
-            });
-        }
+        initTooltip(".info-tooltip-trigger");
     });
 </script>

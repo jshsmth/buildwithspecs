@@ -13,7 +13,7 @@
 		<div class="features-grid">
 			<div class="feature-tile large tile-purple">
 				<div class="tile-icon">
-					<div class="icon-circle">
+					<div class="icon-circle icon-circle--xl">
 						<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
 							<polyline points="14 2 14 8 20 8"></polyline>
@@ -36,7 +36,7 @@
 			</div>
 
 			<div class="feature-tile medium tile-blue">
-				<div class="tile-icon-small">
+				<div class="tile-icon-small icon-circle icon-circle--lg">
 					<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<polyline points="16 18 22 12 16 6"></polyline>
 						<polyline points="8 6 2 12 8 18"></polyline>
@@ -49,7 +49,7 @@
 			</div>
 
 			<div class="feature-tile medium tile-green">
-				<div class="tile-icon-small">
+				<div class="tile-icon-small icon-circle icon-circle--lg">
 					<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<polyline points="20 6 9 17 4 12"></polyline>
 					</svg>
@@ -62,7 +62,7 @@
 
 			<div class="feature-tile large tile-yellow">
 				<div class="tile-icon">
-					<div class="icon-circle">
+					<div class="icon-circle icon-circle--xl">
 						<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<circle cx="12" cy="12" r="10"></circle>
 							<polyline points="12 6 12 12 16 14"></polyline>
@@ -201,37 +201,8 @@
 		margin-bottom: var(--space-6);
 	}
 
-	.icon-circle {
-		width: 120px;
-		height: 120px;
-		border-radius: 50%;
-		background: var(--color-white);
-		border: var(--border-width) solid var(--color-border);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		box-shadow: var(--shadow-brutal-sm);
-	}
-
-	.icon-circle svg {
-		color: var(--color-gray-900);
-	}
-
 	.tile-icon-small {
-		width: 80px;
-		height: 80px;
-		border-radius: 50%;
-		background: var(--color-white);
-		border: var(--border-width) solid var(--color-border);
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		margin-bottom: var(--space-4);
-		box-shadow: var(--shadow-brutal-sm);
-	}
-
-	.tile-icon-small svg {
-		color: var(--color-gray-900);
 	}
 
 	.icon-minimal {
@@ -306,7 +277,7 @@
 	}
 
 	.stat-number {
-		font-size: clamp(2rem, 4vw, 3rem);
+		font-size: var(--text-stat);
 		font-weight: 900;
 		color: var(--color-gray-900);
 		line-height: 1;
@@ -349,26 +320,6 @@
 			grid-column: span 1;
 			grid-row: span 1;
 			padding: var(--space-6);
-		}
-
-		.icon-circle {
-			width: 80px;
-			height: 80px;
-		}
-
-		.icon-circle svg {
-			width: 40px;
-			height: 40px;
-		}
-
-		.tile-icon-small {
-			width: 60px;
-			height: 60px;
-		}
-
-		.tile-icon-small svg {
-			width: 32px;
-			height: 32px;
 		}
 	}
 </style>
