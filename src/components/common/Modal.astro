@@ -1,0 +1,96 @@
+---
+interface Props {
+	id: string;
+	class?: string;
+}
+
+const { id, class: className = '' } = Astro.props;
+---
+
+<div id={id} class:list={['modal-backdrop', className]} aria-hidden="true">
+	<div class="modal-content" role="dialog" aria-labelledby={`${id}-title`}>
+		<button class="modal-close" aria-label="Close modal">
+			<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<line x1="18" y1="6" x2="6" y2="18"></line>
+				<line x1="6" y1="6" x2="18" y2="18"></line>
+			</svg>
+		</button>
+		<div class="modal-body">
+			<slot />
+		</div>
+	</div>
+</div>
+
+<style>
+	.modal-backdrop {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.5);
+		backdrop-filter: blur(4px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: var(--space-4);
+		z-index: var(--z-modal-backdrop);
+		opacity: 0;
+		visibility: hidden;
+		transition: all var(--transition-base);
+	}
+
+	.modal-backdrop.active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.modal-content {
+		background: var(--color-white);
+		border-radius: var(--border-radius);
+		border: var(--border-width) solid var(--color-border);
+		box-shadow: var(--shadow-brutal-lg);
+		max-width: 500px;
+		width: 100%;
+		position: relative;
+		transform: scale(0.9) translateY(20px);
+		transition: transform var(--transition-base);
+		z-index: var(--z-modal);
+	}
+
+	.modal-backdrop.active .modal-content {
+		transform: scale(1) translateY(0);
+	}
+
+	.modal-close {
+		position: absolute;
+		top: var(--space-4);
+		right: var(--space-4);
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		color: var(--color-gray-600);
+		transition: color var(--transition-fast);
+		padding: var(--space-2);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+	}
+
+	.modal-close:hover {
+		color: var(--color-gray-900);
+		background: var(--color-gray-100);
+	}
+
+	.modal-body {
+		padding: var(--space-10) var(--space-8) var(--space-8);
+		text-align: center;
+	}
+
+	@media (max-width: 640px) {
+		.modal-body {
+			padding: var(--space-8) var(--space-6) var(--space-6);
+		}
+	}
+</style>

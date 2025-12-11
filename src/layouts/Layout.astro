@@ -1,6 +1,6 @@
 ---
 import Analytics from '@vercel/analytics/astro';
-import DonationModal from '../components/modals/DonationModal.astro';
+import DonationModal from '../components/common/DonationModal.astro';
 
 interface Props {
 	title?: string;
@@ -46,11 +46,12 @@ const {
 
 		<!-- Skip to main content for accessibility -->
 		<a href="#main-content" class="skip-link">Skip to main content</a>
+
+		<Analytics />
 	</head>
 	<body>
 		<slot />
 		<DonationModal />
-		<Analytics />
 	</body>
 </html>
 
@@ -71,7 +72,18 @@ const {
 		--color-danger: #f87171; /* Soft red */
 		--color-info: #60a5fa; /* Soft blue */
 
-		/* Pastels for backgrounds */
+		/* Pastels for backgrounds
+		   Section Background Color System:
+		   - Hero: --color-pastel-purple (primary brand section)
+		   - Features: --color-background (neutral for content focus)
+		   - Why It Matters: --color-pastel-yellow (warm, inviting)
+		   - AI Without Specs: --color-pastel-blue (contrast/comparison)
+		   - Download: --color-primary (CTA emphasis)
+		   - Donate: --color-pastel-purple (brand alignment)
+		   - How To Start: --color-white (clean, instructional)
+		   - Footer: --color-pastel-pink (soft closing)
+		   - Header: --color-pastel-purple (brand consistency)
+		*/
 		--color-pastel-pink: #ECC6CD; /* Deeper mauve pink */
 		--color-pastel-blue: #C6D9EC; /* Deeper soft blue */
 		--color-pastel-green: #C6ECD4; /* Deeper mint green */
@@ -167,6 +179,18 @@ const {
 		--breakpoint-md: 768px;
 		--breakpoint-lg: 1024px;
 		--breakpoint-xl: 1280px;
+
+		/* Fluid Typography - for stat numbers and hero text */
+		--text-stat: clamp(2rem, 4vw, 3rem);
+		--text-stat-lg: clamp(2.5rem, 5vw, 4rem);
+		--text-hero: clamp(4rem, 10vw, 6.5rem);
+		--text-hero-subtitle: clamp(1.5rem, 3.5vw, 2rem);
+
+		/* Icon Circle Sizes */
+		--icon-size-sm: 44px;
+		--icon-size-md: 60px;
+		--icon-size-lg: 80px;
+		--icon-size-xl: 120px;
 	}
 
 	/* =========================================
@@ -311,6 +335,67 @@ const {
 	@media (min-width: 768px) {
 		.section {
 			padding: var(--space-32) 0;
+		}
+	}
+
+	/* =========================================
+	   ICON UTILITY CLASSES
+	   ========================================= */
+	.icon-circle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		background: var(--color-white);
+		border: var(--border-width) solid var(--color-border);
+		box-shadow: var(--shadow-brutal-sm);
+		flex-shrink: 0;
+	}
+
+	.icon-circle--sm {
+		width: var(--icon-size-sm);
+		height: var(--icon-size-sm);
+	}
+
+	.icon-circle--md {
+		width: var(--icon-size-md);
+		height: var(--icon-size-md);
+	}
+
+	.icon-circle--lg {
+		width: var(--icon-size-lg);
+		height: var(--icon-size-lg);
+	}
+
+	.icon-circle--xl {
+		width: var(--icon-size-xl);
+		height: var(--icon-size-xl);
+	}
+
+	.icon-circle svg {
+		color: var(--color-gray-900);
+	}
+
+	/* Icon circle responsive adjustments */
+	@media (max-width: 640px) {
+		.icon-circle--xl {
+			width: var(--icon-size-lg);
+			height: var(--icon-size-lg);
+		}
+
+		.icon-circle--xl svg {
+			width: 40px;
+			height: 40px;
+		}
+
+		.icon-circle--lg {
+			width: var(--icon-size-md);
+			height: var(--icon-size-md);
+		}
+
+		.icon-circle--lg svg {
+			width: 32px;
+			height: 32px;
 		}
 	}
 </style>
