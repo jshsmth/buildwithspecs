@@ -25,3 +25,12 @@ pnpm-debug.log*
 
 #docs
 docs/
+!starter-kit/repository/docs/
+
+# generated starter-kit artifacts
+public/starter-kit/
+public/downloads/build-with-specs-starter-kit-v1.zip
+
+# local design review evidence
+.impeccable/review/
+.vercel/output/

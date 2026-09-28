@@ -1,0 +1,374 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-28T07:44:01.431597Z",
+  "title": "Design System: Build with Specs",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm paper",
+        "tonalRamp": [
+          "oklch(15.00% 0.0082 91.48)",
+          "oklch(26.43% 0.0082 91.48)",
+          "oklch(37.86% 0.0082 91.48)",
+          "oklch(49.29% 0.0082 91.48)",
+          "oklch(60.71% 0.0082 91.48)",
+          "oklch(72.14% 0.0082 91.48)",
+          "oklch(83.57% 0.0082 91.48)",
+          "oklch(95.00% 0.0082 91.48)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Document paper",
+        "tonalRamp": [
+          "oklch(15.00% 0.0054 95.10)",
+          "oklch(26.43% 0.0054 95.10)",
+          "oklch(37.86% 0.0054 95.10)",
+          "oklch(49.29% 0.0054 95.10)",
+          "oklch(60.71% 0.0054 95.10)",
+          "oklch(72.14% 0.0054 95.10)",
+          "oklch(83.57% 0.0054 95.10)",
+          "oklch(95.00% 0.0054 95.10)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Near-black ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.0146 118.78)",
+          "oklch(26.43% 0.0146 118.78)",
+          "oklch(37.86% 0.0146 118.78)",
+          "oklch(49.29% 0.0146 118.78)",
+          "oklch(60.71% 0.0146 118.78)",
+          "oklch(72.14% 0.0146 118.78)",
+          "oklch(83.57% 0.0146 118.78)",
+          "oklch(95.00% 0.0146 118.78)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.0171 115.37)",
+          "oklch(26.43% 0.0171 115.37)",
+          "oklch(37.86% 0.0171 115.37)",
+          "oklch(49.29% 0.0171 115.37)",
+          "oklch(60.71% 0.0171 115.37)",
+          "oklch(72.14% 0.0171 115.37)",
+          "oklch(83.57% 0.0171 115.37)",
+          "oklch(95.00% 0.0171 115.37)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Fine rule",
+        "tonalRamp": [
+          "oklch(15.00% 0.0148 106.70)",
+          "oklch(26.43% 0.0148 106.70)",
+          "oklch(37.86% 0.0148 106.70)",
+          "oklch(49.29% 0.0148 106.70)",
+          "oklch(60.71% 0.0148 106.70)",
+          "oklch(72.14% 0.0148 106.70)",
+          "oklch(83.57% 0.0148 106.70)",
+          "oklch(95.00% 0.0148 106.70)"
+        ]
+      },
+      "violet": {
+        "role": "primary",
+        "displayName": "Violet",
+        "tonalRamp": [
+          "oklch(15.00% 0.0965 298.85)",
+          "oklch(26.43% 0.0965 298.85)",
+          "oklch(37.86% 0.0965 298.85)",
+          "oklch(49.29% 0.0965 298.85)",
+          "oklch(60.71% 0.0965 298.85)",
+          "oklch(72.14% 0.0965 298.85)",
+          "oklch(83.57% 0.0965 298.85)",
+          "oklch(95.00% 0.0965 298.85)"
+        ]
+      },
+      "violet-dark": {
+        "role": "primary",
+        "displayName": "Deep violet",
+        "tonalRamp": [
+          "oklch(15.00% 0.0941 299.29)",
+          "oklch(26.43% 0.0941 299.29)",
+          "oklch(37.86% 0.0941 299.29)",
+          "oklch(49.29% 0.0941 299.29)",
+          "oklch(60.71% 0.0941 299.29)",
+          "oklch(72.14% 0.0941 299.29)",
+          "oklch(83.57% 0.0941 299.29)",
+          "oklch(95.00% 0.0941 299.29)"
+        ]
+      },
+      "lavender": {
+        "role": "primary",
+        "displayName": "Lavender",
+        "tonalRamp": [
+          "oklch(15.00% 0.0156 306.41)",
+          "oklch(26.43% 0.0156 306.41)",
+          "oklch(37.86% 0.0156 306.41)",
+          "oklch(49.29% 0.0156 306.41)",
+          "oklch(60.71% 0.0156 306.41)",
+          "oklch(72.14% 0.0156 306.41)",
+          "oklch(83.57% 0.0156 306.41)",
+          "oklch(95.00% 0.0156 306.41)"
+        ]
+      },
+      "sage": {
+        "role": "neutral",
+        "displayName": "Sage paper",
+        "tonalRamp": [
+          "oklch(15.00% 0.0161 114.39)",
+          "oklch(26.43% 0.0161 114.39)",
+          "oklch(37.86% 0.0161 114.39)",
+          "oklch(49.29% 0.0161 114.39)",
+          "oklch(60.71% 0.0161 114.39)",
+          "oklch(72.14% 0.0161 114.39)",
+          "oklch(83.57% 0.0161 114.39)",
+          "oklch(95.00% 0.0161 114.39)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Button white",
+        "tonalRamp": [
+          "oklch(15.00% 0.0000 89.88)",
+          "oklch(26.43% 0.0000 89.88)",
+          "oklch(37.86% 0.0000 89.88)",
+          "oklch(49.29% 0.0000 89.88)",
+          "oklch(60.71% 0.0000 89.88)",
+          "oklch(72.14% 0.0000 89.88)",
+          "oklch(83.57% 0.0000 89.88)",
+          "oklch(95.00% 0.0000 89.88)"
+        ]
+      },
+      "workbench": {
+        "role": "neutral",
+        "displayName": "Workbench paper",
+        "tonalRamp": [
+          "oklch(15.00% 0.0119 106.63)",
+          "oklch(26.43% 0.0119 106.63)",
+          "oklch(37.86% 0.0119 106.63)",
+          "oklch(49.29% 0.0119 106.63)",
+          "oklch(60.71% 0.0119 106.63)",
+          "oklch(72.14% 0.0119 106.63)",
+          "oklch(83.57% 0.0119 106.63)",
+          "oklch(95.00% 0.0119 106.63)"
+        ]
+      },
+      "code-surface": {
+        "role": "neutral",
+        "displayName": "Code paper",
+        "tonalRamp": [
+          "oklch(15.00% 0.0080 98.88)",
+          "oklch(26.43% 0.0080 98.88)",
+          "oklch(37.86% 0.0080 98.88)",
+          "oklch(49.29% 0.0080 98.88)",
+          "oklch(60.71% 0.0080 98.88)",
+          "oklch(72.14% 0.0080 98.88)",
+          "oklch(83.57% 0.0080 98.88)",
+          "oklch(95.00% 0.0080 98.88)"
+        ]
+      },
+      "closing-button": {
+        "role": "primary",
+        "displayName": "Closing plum",
+        "tonalRamp": [
+          "oklch(15.00% 0.0499 310.05)",
+          "oklch(26.43% 0.0499 310.05)",
+          "oklch(37.86% 0.0499 310.05)",
+          "oklch(49.29% 0.0499 310.05)",
+          "oklch(60.71% 0.0499 310.05)",
+          "oklch(72.14% 0.0499 310.05)",
+          "oklch(83.57% 0.0499 310.05)",
+          "oklch(95.00% 0.0499 310.05)"
+        ]
+      },
+      "closing-button-hover": {
+        "role": "primary",
+        "displayName": "Closing plum hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.0703 309.23)",
+          "oklch(26.43% 0.0703 309.23)",
+          "oklch(37.86% 0.0703 309.23)",
+          "oklch(49.29% 0.0703 309.23)",
+          "oklch(60.71% 0.0703 309.23)",
+          "oklch(72.14% 0.0703 309.23)",
+          "oklch(83.57% 0.0703 309.23)",
+          "oklch(95.00% 0.0703 309.23)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Home hero heading; responsive overrides are documented in Layout and Typography."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Editorial section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Sans-serif headings inside artifact documents."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Base page typography."
+      },
+      "reading": {
+        "displayName": "Reading",
+        "purpose": "Compact document and setup-guide prose."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase, tracked input/output metadata."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Preformatted commands; filenames use the same family and size with inherited line height."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "action-hover",
+        "value": "background 0.2s ease",
+        "purpose": "Primary and closing action hover."
+      },
+      {
+        "name": "stage-hover",
+        "value": "background 0.2s ease, color 0.2s ease",
+        "purpose": "Stage selection and hover."
+      },
+      {
+        "name": "page-settle",
+        "value": "0.28s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Panel entry: opacity 0.65 to 1; translateY(4px) to 0; blur(1px) to 0."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "(prefers-reduced-motion: reduce)",
+        "purpose": "Disable animations and transitions; use auto scrolling."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-max",
+        "value": "370px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "760px"
+      },
+      {
+        "name": "intermediate-max",
+        "value": "1000px"
+      },
+      {
+        "name": "wide-min",
+        "value": "1600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The shared starter-kit and download action.",
+      "html": "<a class=\"ds-button\" href=\"/start\">Get the starter kit <svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\"/></svg></a>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:24px;background:var(--violet, #65508c);color:#fff;border:1px solid transparent;padding:14px 22px;text-decoration:none;font:500 14px/1.65 var(--sans, \"DM Sans\", sans-serif);border-radius:4px;min-height:50px;transition:background .2s ease}.ds-button:hover{background:var(--violet-dark, #4c376f);color:#fff}.ds-button:focus-visible{outline:2px solid var(--violet, #65508c);outline-offset:5px;}@media(max-width:760px){.ds-button{padding:13px 18px;font-size:12px;gap:16px}}@media(max-width:370px){.ds-button{gap:12px;padding-inline:14px}}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
+    },
+    {
+      "name": "Closing action",
+      "kind": "button",
+      "refersTo": "button-closing",
+      "description": "The darker action used on the closing lavender band.",
+      "html": "<a class=\"ds-button ds-closing\" href=\"/start\">Get the starter kit <svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\"/></svg></a>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:24px;background:var(--violet, #65508c);color:#fff;border:1px solid transparent;padding:14px 22px;text-decoration:none;font:500 14px/1.65 var(--sans, \"DM Sans\", sans-serif);border-radius:4px;min-height:50px;transition:background .2s ease}.ds-button:hover{background:var(--violet-dark, #4c376f);color:#fff}.ds-button:focus-visible{outline:2px solid var(--violet, #65508c);outline-offset:5px;}@media(max-width:760px){.ds-button{padding:13px 18px;font-size:12px;gap:16px}}@media(max-width:370px){.ds-button{gap:12px;padding-inline:14px}}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-closing{background:#352640}.ds-closing:hover{background:#4a345b}"
+    },
+    {
+      "name": "Text action",
+      "kind": "button",
+      "refersTo": "text-link",
+      "description": "A low-emphasis link to supporting material.",
+      "html": "<a class=\"ds-text-link\" href=\"/start#example\">Take the example with you <span aria-hidden=\"true\">↗</span></a>",
+      "css": ".ds-text-link{display:inline-flex;gap:12px;align-items:center;font:400 13px/1.65 var(--sans, \"DM Sans\", sans-serif);color:var(--ink, #262820);text-decoration:none;border-bottom:1px solid var(--line, #d9d9ce);padding:5px 0}.ds-text-link:hover{color:var(--violet-dark, #4c376f);border-color:var(--violet, #65508c)}.ds-text-link:focus-visible{outline:2px solid var(--violet, #65508c);outline-offset:5px;}"
+    },
+    {
+      "name": "Main navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Text navigation with a ruled starter-kit action; only that action remains on mobile.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"/#workflow\">The workflow</a><a href=\"/#skills\">The skills</a><a class=\"ds-nav-cta\" href=\"/start\">Get the starter kit <svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\"/></svg></a></nav>",
+      "css": ".ds-nav{display:flex;gap:30px;align-items:center;font:400 13px/1.65 var(--sans, \"DM Sans\", sans-serif);color:var(--ink, #262820)}.ds-nav a{color:inherit;text-decoration:none;padding:10px 0}.ds-nav a:hover{color:var(--violet-dark, #4c376f)}.ds-nav a:focus-visible{outline:2px solid var(--violet, #65508c);outline-offset:5px;}.ds-nav .ds-nav-cta{display:flex;gap:15px;align-items:center;border-bottom:1px solid var(--ink, #262820);font-weight:500}.ds-nav-cta svg{width:16px;height:16px}@media(max-width:760px){.ds-nav{gap:0}.ds-nav>a:not(.ds-nav-cta){display:none}.ds-nav .ds-nav-cta{font-size:12px;gap:6px}.ds-nav-cta svg{width:14px}}"
+    },
+    {
+      "name": "Stage selector",
+      "kind": "nav",
+      "refersTo": "stage-selector",
+      "description": "Visual sample of the six-stage rail with Context selected; runtime tab switching lives in Workflow.astro.",
+      "html": "<nav class=\"ds-stages\" aria-label=\"Workflow stages\"><a class=\"ds-stage ds-selected\" href=\"/#panel-context\"><span class=\"ds-number\">01</span>Context</a><a class=\"ds-stage\" href=\"/#panel-plan\"><span class=\"ds-number\">02</span>Plan</a><a class=\"ds-stage\" href=\"/#panel-spec\"><span class=\"ds-number\">03</span>Spec</a><a class=\"ds-stage\" href=\"/#panel-tickets\"><span class=\"ds-number\">04</span>Tickets</a><a class=\"ds-stage\" href=\"/#panel-build\"><span class=\"ds-number\">05</span>Build</a><a class=\"ds-stage\" href=\"/#panel-verify\"><span class=\"ds-number\">06</span>Verify</a></nav>",
+      "css": ".ds-stages{display:grid;grid-template-columns:repeat(6,1fr);border-block:1px solid var(--line, #d9d9ce)}.ds-stage{display:flex;align-items:center;gap:13px;color:var(--ink, #262820);text-decoration:none;font:400 14px/1.65 var(--sans, \"DM Sans\", sans-serif);padding:20px 16px;border-bottom:2px solid transparent;margin-bottom:-1px;transition:background .2s ease,color .2s ease}.ds-number{font:400 12px/1.65 var(--mono, ui-monospace, SFMono-Regular, Consolas, monospace);color:var(--muted, #66685d);font-variant-numeric:tabular-nums}.ds-stage:hover,.ds-selected{background:var(--lavender, #eee9f4)}.ds-stage:hover,.ds-selected{color:var(--violet-dark, #4c376f)}.ds-selected{border-bottom-color:var(--violet, #65508c)}.ds-stage:focus-visible{outline:2px solid var(--violet, #65508c);outline-offset:5px;}@media(max-width:1000px){.ds-stage{gap:8px;padding-inline:10px}}@media(max-width:760px){.ds-stages{grid-template-columns:repeat(3,1fr)}.ds-stage{font-size:12px;padding:14px 10px}}@media(prefers-reduced-motion:reduce){.ds-stage{transition:none}}"
+    },
+    {
+      "name": "Artifact document",
+      "kind": "card",
+      "refersTo": "artifact",
+      "description": "A square document with filename bar, reading body, and violet annotation.",
+      "html": "<article class=\"ds-artifact\"><div class=\"ds-bar\"><svg viewBox=\"0 0 20 20\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" aria-hidden=\"true\"><path d=\"M5 2.5h6l4 4v11H5zM11 2.5v4h4M7 10h6M7 13h6\"/></svg><code>AGENTS.md</code><span class=\"ds-type\">Markdown</span></div><div class=\"ds-body\"><h4>Small entry point. Useful depth.</h4><p>Keep project-specific knowledge in the repository.</p><p class=\"ds-note\">Illustrative example</p></div></article>",
+      "css": ".ds-artifact{background:var(--surface, #fffefa);color:var(--ink, #262820);font-family:var(--sans, \"DM Sans\", sans-serif);min-width:0}.ds-bar{display:flex;gap:9px;align-items:center;border-bottom:1px solid var(--line, #d9d9ce);padding:12px 22px;color:var(--muted, #66685d);min-width:0}.ds-bar svg{flex-shrink:0}.ds-bar code{font:400 12px/1.65 var(--mono, ui-monospace, SFMono-Regular, Consolas, monospace);overflow-wrap:anywhere}.ds-type{margin-left:auto;font-size:12px}.ds-body{padding:28px}.ds-body h4{margin:0;font-size:18px;line-height:1.35;font-weight:500;letter-spacing:-.3px}.ds-body p{margin:10px 0 0;font-size:14px;line-height:1.7;color:var(--muted, #66685d)}.ds-body .ds-note{font:italic 400 15px/1.7 var(--serif, Newsreader, Georgia, serif);color:var(--violet, #65508c);padding-top:3px}@media(max-width:1000px){.ds-body{padding:22px}}@media(max-width:760px){.ds-bar{padding:11px 16px;gap:7px}.ds-type{display:none}.ds-body{padding:22px 18px}.ds-body h4{font-size:16px}}"
+    },
+    {
+      "name": "Skill disclosure",
+      "kind": "custom",
+      "refersTo": "skill-disclosure",
+      "description": "A native disclosure with a serif action and plus/minus indicator.",
+      "html": "<details class=\"ds-skill\"><summary><span class=\"ds-category\">Plan</span><span class=\"ds-title\">Shape the work</span><code>shape-work</code><span class=\"ds-expand\" aria-hidden=\"true\"></span></summary><div class=\"ds-details\"><p>Small, reusable procedures with clear inputs and useful outputs.</p></div></details>",
+      "css": ".ds-skill{border-block:1px solid #d3cfc5;color:var(--ink, #262820);font:400 14px/1.65 var(--sans, \"DM Sans\", sans-serif)}.ds-skill summary{display:grid;grid-template-columns:130px 1fr 180px 20px;align-items:center;gap:24px;padding:25px 0;cursor:pointer;list-style:none}.ds-skill summary::-webkit-details-marker{display:none}.ds-category,.ds-skill code{font-size:12px;color:var(--muted, #66685d)}.ds-skill code{font-family:var(--mono, ui-monospace, SFMono-Regular, Consolas, monospace)}.ds-title{font:400 27px/1.2 var(--serif, Newsreader, Georgia, serif)}.ds-skill summary:hover .ds-title{color:var(--violet, #65508c)}.ds-skill summary:focus-visible{outline:2px solid var(--violet, #65508c);outline-offset:5px;}.ds-expand{width:16px;height:16px;position:relative}.ds-expand:before,.ds-expand:after{content:\"\";position:absolute;top:7px;left:2px;width:12px;height:1px;background:var(--ink, #262820)}.ds-expand:after{transform:rotate(90deg)}.ds-skill[open] .ds-expand:after{transform:rotate(0)}.ds-details{padding:0 44px 28px 154px;max-width:920px;color:var(--muted, #66685d)}.ds-details p{margin:0}@media(max-width:1000px){.ds-skill summary{grid-template-columns:100px 1fr 150px 20px;gap:18px}.ds-details{padding-left:118px}}@media(max-width:760px){.ds-skill summary{grid-template-columns:75px 1fr 16px;gap:14px;padding:23px 0}.ds-title{font-size:24px}.ds-skill code{grid-column:2;grid-row:2;margin-top:-7px}.ds-expand{grid-column:3;grid-row:1}.ds-details{padding:0 0 25px}}@media(max-width:370px){.ds-skill summary{grid-template-columns:60px 1fr 16px;gap:12px}.ds-title{font-size:22px}}"
+    },
+    {
+      "name": "Repository map",
+      "kind": "card",
+      "refersTo": "repository-map",
+      "description": "A sage document map, with project paths and fine tree rules.",
+      "html": "<div class=\"ds-map\"><div class=\"ds-map-heading\"><code>your-project/</code><span>Knowledge stays with the code</span></div><div class=\"ds-tree\"><code>AGENTS.md</code><span>The starting point</span></div><div class=\"ds-tree\"><code>docs/</code><span>Project knowledge</span></div><div class=\"ds-tree ds-nested\"><code>_index.md</code><span>A map of the knowledge</span></div></div>",
+      "css": ".ds-map{background:var(--sage, #e8eade);color:var(--ink, #262820);padding:24px 28px;min-width:0;font:400 12px/1.65 var(--sans, \"DM Sans\", sans-serif)}.ds-map code{font:400 12px/1.65 var(--mono, ui-monospace, SFMono-Regular, Consolas, monospace)}.ds-map-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid #cbcfbc;padding-bottom:17px;margin-bottom:16px}.ds-map-heading span{color:var(--muted, #66685d)}.ds-tree{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:10px 0}.ds-tree span{color:#5e6352;text-align:right}.ds-nested{padding-left:24px;margin-left:4px;border-left:1px solid #bbc1ad}@media(max-width:760px){.ds-map{padding:22px}.ds-map-heading{gap:10px}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Engineering Field Guide",
+    "overview": "The engineering field guide makes technical material feel readable and inspectable. Warm paper, near-black ink, editorial serif headings, and quiet violet annotations frame real document structures. Keep the Build with Specs name and ghost mark.\n\nGenerous outer spacing surrounds compact working material. Fine rules, unboxed reading sections, and square document surfaces establish hierarchy; the interactive artifact viewer is the signature pattern. Motion is brief and tied to a change of content.",
+    "keyCharacteristics": [
+      "Editorial headings with practical sans-serif reading text.",
+      "Paper surfaces, fine rules, and restrained violet emphasis.",
+      "Inspectable documents with accessible, progressively enhanced interactions."
+    ],
+    "rules": [
+      {
+        "name": "The Annotation Rule",
+        "body": "Use violet for actions, selected stages, and editorial emphasis; keep ordinary reading text in ink or muted ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The Document Rule",
+        "body": "Use tonal surfaces and fine rules to distinguish documents; do not add drop shadows to the current flat system.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do preserve the ghost mark and the self-hosted Newsreader / DM Sans pairing.",
+      "Do keep document paths and commands monospace, and allow long content to wrap or scroll within its surface.",
+      "Do preserve visible focus, meaningful content without JavaScript, and reduced-motion behavior.",
+      "Do keep illustrative labels adjacent to worked examples."
+    ],
+    "donts": [
+      "Don't replace ruled reading sections with a uniform grid of rounded cards.",
+      "Don't use violet for long passages or add decorative gradients and ambient shadows.",
+      "Don't hide essential artifact content to make the mobile composition fit."
+    ]
+  }
+}

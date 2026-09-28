@@ -1,18 +1,288 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/layout/Header.astro';
-import Hero from '../components/sections/Hero.astro';
-import FeaturesTiled from '../components/sections/FeaturesTiled.astro';
-import AIWithoutSpecs from '../components/sections/AIWithoutSpecs.astro';
-import HowToStart from '../components/sections/HowToStart.astro';
-import Footer from '../components/layout/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/layout/Header.astro";
+import Footer from "../components/layout/Footer.astro";
+import Workflow from "../components/sections/Workflow.astro";
+import { skills } from "../data/workflow";
 ---
 
 <Layout>
 	<Header />
-	<Hero />
-	<FeaturesTiled />
-	<AIWithoutSpecs />
-	<HowToStart />
+	<main id="main-content">
+		<section class="hero wrap">
+			<h1>
+				Give your agents context.
+				<br />
+				Build with <em>intention.</em>
+			</h1>
+			<div class="hero-bottom">
+				<div>
+					<p class="hero-description">
+						Turn ideas into working software with project knowledge, reusable
+						skills, clear specs, and changes you can verify.
+					</p>
+					<div class="hero-actions">
+						<a class="button" href="/start">
+							Get the starter kit{" "}
+							<svg
+								viewBox="0 0 24 24"
+								width="18"
+								height="18"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.7"
+								aria-hidden="true"
+							>
+								<path d="M5 12h14m-6-6 6 6-6 6" />
+							</svg>
+						</a>
+						<a class="text-link" href="#workflow">
+							Explore the workflow <span aria-hidden="true">↓</span>
+						</a>
+					</div>
+				</div>
+				<aside class="hero-aside">
+					<span class="aside-rule"></span>
+					<p>
+						A field guide for developers
+						<br />
+						working with coding agents.
+					</p>
+					<span>
+						Plain files. Shared decisions.
+						<br />A method you can make your own.
+					</span>
+				</aside>
+			</div>
+		</section>
+		<Workflow />
+		<section id="context" class="context-section wrap section-space">
+			<div class="section-heading">
+				<h2>
+					A good agent starts
+					<br />
+					with a good map.
+				</h2>
+				<div>
+					<p>
+						Your project already has a history. Make its architecture,
+						decisions, and constraints easy to find before asking an agent to
+						change them.
+					</p>
+					<a class="text-link" href="/start#knowledge-tools">
+						Explore indexing options <span aria-hidden="true">↗</span>
+					</a>
+				</div>
+			</div>
+			<div class="context-grid">
+				<div class="repo-map">
+					<div class="repo-map-header">
+						<span>your-project/</span>
+						<span>Knowledge stays with the code</span>
+					</div>
+					<div class="tree-line">
+						<code>AGENTS.md</code>
+						<span>The starting point</span>
+					</div>
+					<div class="tree-line">
+						<code>guardrails.md</code>
+						<span>Your project boundaries</span>
+					</div>
+					<div class="tree-line tree-folder">
+						<code>docs/</code>
+						<span>Project knowledge</span>
+					</div>
+					<div class="tree-line nested">
+						<code>_index.md</code>
+						<span>A map of the knowledge</span>
+					</div>
+					<div class="tree-line nested">
+						<code>architecture.md</code>
+						<span>How the pieces fit</span>
+					</div>
+					<div class="tree-line nested">
+						<code>decisions.md</code>
+						<span>What was decided, and why</span>
+					</div>
+					<div class="tree-line nested">
+						<code>development.md</code>
+						<span>How to work in this repo</span>
+					</div>
+					<div class="map-command">
+						<code>docs/_index.md</code>
+						<span>Start here</span>
+					</div>
+				</div>
+				<div class="context-explanation">
+					<h3>
+						Small entry point.
+						<br />
+						Useful depth.
+					</h3>
+					<p>
+						<code>AGENTS.md</code> routes the task. A compact documentation
+						index helps agents find the relevant pages without reading the whole
+						project. Start with linked Markdown; add search or wiki tooling as
+						your knowledge grows.
+					</p>
+					<p>
+						Keep reusable procedures in your skills directory. Keep
+						project-specific knowledge in the repository. Update the relevant
+						page when the behaviour changes.
+					</p>
+					<div class="context-note">
+						<span class="note-marker" aria-hidden="true">
+							↳
+						</span>
+						<p>
+							An index makes knowledge discoverable.
+							<br />
+							Keeping it accurate is part of the work.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="skills" class="skills-section section-space">
+			<div class="wrap">
+				<div class="section-heading">
+					<h2>
+						A skill for the job
+						<br />
+						<em>in front of you.</em>
+					</h2>
+					<div>
+						<p>
+							Small, reusable procedures with clear inputs and useful outputs.
+							Start with these six original templates and adapt them to your
+							project.
+						</p>
+						<a class="text-link" href="/start#skills">
+							How to install the skills <span aria-hidden="true">↗</span>
+						</a>
+					</div>
+				</div>
+				<div class="skill-list">
+					{skills.map((skill) => (
+						<details class="skill-row">
+							<summary>
+								<span class="skill-category">{skill.category}</span>
+								<span class="skill-title">{skill.action}</span>
+								<code>{skill.name}</code>
+								<span class="expand-icon" aria-hidden="true"></span>
+							</summary>
+							<div class="skill-details">
+								<p>{skill.description}</p>
+								<dl>
+									<div>
+										<dt>Input</dt>
+										<dd>{skill.input}</dd>
+									</div>
+									<div>
+										<dt>Output</dt>
+										<dd>{skill.output}</dd>
+									</div>
+								</dl>
+								<a
+									class="text-link"
+									href={`/starter-kit/skills/${skill.name}/SKILL.md`}
+								>
+									Read the skill <span aria-hidden="true">↗</span>
+								</a>
+							</div>
+						</details>
+					))}
+				</div>
+				<p class="section-note">
+					A skill is a folder with a <code>SKILL.md</code> file. Your agent’s
+					setup determines where it lives and how you invoke it.{" "}
+					<a href="https://agentskills.io/specification">Explore the format.</a>
+				</p>
+			</div>
+		</section>
+		<section class="verification-section wrap section-space">
+			<div class="verification-copy">
+				<h2>
+					“Done” deserves
+					<br />a little evidence.
+				</h2>
+				<p>
+					A generated change is the beginning of verification. Review the diff,
+					check the behaviour, and leave a handoff someone else can follow.
+				</p>
+				<p>
+					Keep local checks, hosted CI, and deployment status separate. Then
+					update the docs so the next task starts with better context.
+				</p>
+				<a class="text-link" href="/starter-kit/templates/handoff.md">
+					Read the handoff template <span aria-hidden="true">↗</span>
+				</a>
+			</div>
+			<div class="verification-sheet">
+				<div class="sheet-top">
+					<span>Change handoff</span>
+					<span>Example format</span>
+				</div>
+				<h3>Daily reminder preferences</h3>
+				<dl>
+					<div>
+						<dt>Changed</dt>
+						<dd>Members can control daily reminders in Settings.</dd>
+					</div>
+					<div>
+						<dt>Checked</dt>
+						<dd>
+							Persistence, scheduler behaviour, failure recovery, and keyboard
+							access.
+						</dd>
+					</div>
+					<div>
+						<dt>Still to do</dt>
+						<dd>Hosted CI and post-deployment acceptance.</dd>
+					</div>
+					<div>
+						<dt>Knowledge</dt>
+						<dd>Notification contract updated with the new preference.</dd>
+					</div>
+				</dl>
+				<p>
+					Illustrative only. A report should include the actual commands and
+					results.
+				</p>
+			</div>
+		</section>
+		<section class="closing-section">
+			<div class="wrap closing-inner">
+				<div>
+					<h2>
+						Make your next feature
+						<br />a better starting point.
+					</h2>
+					<p>
+						Take the skills, the templates, and the worked example.
+						<br />
+						Bring your own repository.
+					</p>
+				</div>
+				<div class="closing-action">
+					<a class="button button-light" href="/start">
+						Get the starter kit{" "}
+						<svg
+							viewBox="0 0 24 24"
+							width="18"
+							height="18"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.7"
+							aria-hidden="true"
+						>
+							<path d="M5 12h14m-6-6 6 6-6 6" />
+						</svg>
+					</a>
+					<span>Free to use and adapt. No signup.</span>
+				</div>
+			</div>
+		</section>
+	</main>
 	<Footer />
 </Layout>

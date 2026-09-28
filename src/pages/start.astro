@@ -1,0 +1,314 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/layout/Header.astro";
+import Footer from "../components/layout/Footer.astro";
+---
+
+<Layout
+	title="Get the starter kit — Build with Specs"
+	description="Adopt the Build with Specs workflow with six original agent skills, repository templates, and a worked example. Free to use and adapt."
+>
+	<Header />
+	<main id="main-content" class="wrap">
+		<section class="guide-hero">
+			<a class="breadcrumb" href="/">
+				Back to the field guide
+			</a>
+			<h1>
+				A useful starting point.
+				<br />
+				<em>Make it your own.</em>
+			</h1>
+			<p>
+				Six focused skills, project-context templates, and a worked example. Add
+				the pieces you need to the way you already build.
+			</p>
+			<div class="download-line">
+				<a
+					class="button"
+					href="/downloads/build-with-specs-starter-kit-v1.zip"
+					download
+				>
+					Download the starter kit{" "}
+					<svg
+						viewBox="0 0 24 24"
+						width="18"
+						height="18"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.6"
+						aria-hidden="true"
+					>
+						<path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5" />
+					</svg>
+				</a>
+				<span>v1.0.0 · ZIP · MIT licensed · No signup</span>
+			</div>
+		</section>
+		<div class="guide-layout">
+			<nav class="guide-nav" aria-label="Setup guide">
+				<a href="#inside">Inside the kit</a>
+				<a href="#repository">Your repository</a>
+				<a href="#wiki">Project knowledge</a>
+				<a href="#skills">Install the skills</a>
+				<a href="#example">Try the workflow</a>
+				<a href="#questions">A few useful answers</a>
+			</nav>
+			<div class="guide-content">
+				<section id="inside" class="guide-section">
+					<h2>Everything has a job.</h2>
+					<dl class="contents-list">
+						<div>
+							<dt>skills/</dt>
+							<dd>
+								Six original SKILL.md templates for shaping, specifying,
+								slicing, implementing, reviewing, and maintaining context.
+							</dd>
+						</div>
+						<div>
+							<dt>repository/</dt>
+							<dd>
+								An AGENTS.md entry point, project boundaries, and documentation
+								seeds to adapt.
+							</dd>
+						</div>
+						<div>
+							<dt>templates/</dt>
+							<dd>Plan, specification, ticket, and handoff formats.</dd>
+						</div>
+						<div>
+							<dt>examples/</dt>
+							<dd>
+								A notification-preferences example, from project context through
+								to a verification handoff.
+							</dd>
+						</div>
+					</dl>
+					<p class="section-note">
+						These are original starter materials. Use your existing coding agent
+						and documentation tools; no particular wiki is required.{" "}
+						<a href="/starter-kit/SOURCES.md">Sources and attribution.</a>
+					</p>
+				</section>
+				<section id="repository" class="guide-section">
+					<h2>Start where you are.</h2>
+					<div class="guide-grid">
+						<div>
+							<h3>Existing repository</h3>
+							<p>
+								Read your current agent instructions first. Merge the useful
+								parts of <code>repository/AGENTS.md</code> and{" "}
+								<code>guardrails.md</code> into your existing guidance. Preserve
+								the project’s actual rules and commands.
+							</p>
+						</div>
+						<div>
+							<h3>New project</h3>
+							<p>
+								Create the application with your usual tooling. Use the kit’s
+								repository templates as a starting point, then fill in the real
+								architecture, validation commands, and project boundaries.
+							</p>
+						</div>
+					</div>
+					<div class="guide-callout">
+						<p>
+							<strong>Adopt a small piece first.</strong> The kit is a set of
+							templates, not an installer. Review files before copying them, and
+							replace the prompts with verified project facts.
+						</p>
+					</div>
+				</section>
+				<section id="wiki" class="guide-section">
+					<h2>Give project knowledge a home.</h2>
+					<p>
+						Adapt the documentation seeds in <code>repository/docs/</code>.
+						Describe your architecture, accepted decisions, and local
+						development workflow. Plain Markdown is a useful starting point.
+					</p>
+					<p>
+						Give agents a small index to read first, with links to the relevant
+						topics. Keep decisions and current behaviour in their own pages,
+						then update those pages as the project changes.
+					</p>
+					<h3>Choose the simplest index that works.</h3>
+					<p>
+						A linked Markdown index may be enough. As the docs grow, you can add
+						search, generated indexes, or wiki tooling. Choose an approach your
+						agent can access and your team can maintain.
+					</p>
+					<details id="knowledge-tools">
+						<summary>Example: index your docs with Plasma Wiki</summary>
+						<p>
+							Plasma Wiki is one option for indexing Markdown documentation and
+							letting agents navigate it through a CLI. It is optional; the same
+							workflow works with a maintained index and your existing tools.
+						</p>
+						<p>
+							<a href="https://www.plasma.ai/research/wiki">
+								Explore Plasma Wiki
+							</a>
+							or follow the{" "}
+							<a href="https://github.com/plasma-ai/wiki">setup guide</a>.
+						</p>
+						<pre><code>uv tool install plasma-wiki</code></pre>
+						<p class="section-note">
+							This example uses{" "}
+							<a href="https://docs.astral.sh/uv/getting-started/installation/">
+								uv
+							</a>
+							. Follow the setup guide to initialise the wiki, keeping its
+							version aligned with your project tooling. Back up existing docs
+							and review initialisation changes.
+						</p>
+						<h3>Example lookup after setup</h3>
+						<pre><code>{'wiki map --path docs\nwiki search "your topic" --path docs\nwiki read <page-name> --path docs'}</code></pre>
+						<p class="section-note">
+							Replace <code>&lt;page-name&gt;</code> with a page returned by
+							your wiki. After edits, refresh the index with{" "}
+							<code>wiki update --path docs</code>
+							and check it with <code>wiki lint --path docs</code>. The kit’s
+							docs are Markdown seeds, not a pre-initialised wiki.
+						</p>
+					</details>
+				</section>
+				<section id="skills" class="guide-section">
+					<h2>Reusable skills. Local knowledge.</h2>
+					<p>
+						Inspect the six folders in <code>skills/</code> and choose the ones
+						you need. Each contains an original <code>SKILL.md</code> with a
+						specific job, inputs, and completion criteria.
+					</p>
+					<ol>
+						<li>
+							<strong>Choose the scope.</strong> Shared skills belong in a
+							user-level directory supported by your client. Project-only skills
+							belong in its supported repository directory.
+						</li>
+						<li>
+							<strong>Copy the complete folder.</strong> For clients that
+							discover it, <code>~/.agents/skills/shape-work/SKILL.md</code> is
+							an example of user-level placement. Check your client’s current
+							discovery rules.
+						</li>
+						<li>
+							<strong>Verify discovery.</strong> Open the client’s skill list or
+							ask it to identify the installed skill. Use the client’s supported
+							invocation syntax; a folder alone does not prove the skill is
+							active.
+						</li>
+						<li>
+							<strong>Adapt deliberately.</strong> Keep reusable procedures in
+							skills and project facts in your repo docs. A skill should point
+							to the relevant context when it needs it.
+						</li>
+					</ol>
+					<a class="text-link" href="https://agentskills.io/specification">
+						Read the Agent Skills specification{" "}
+						<span aria-hidden="true">↗</span>
+					</a>
+				</section>
+				<section id="example" class="guide-section">
+					<h2>Take one feature around the loop.</h2>
+					<p>
+						Start with{" "}
+						<a href="/starter-kit/examples/notifications/README.md">
+							the notification-preferences example
+						</a>
+						. Read the context, decisions, spec, tickets, implementation brief,
+						and final report format in order.
+					</p>
+					<p>
+						Then choose a small feature in your own project. Clarify the
+						decisions, write only the spec you need, and split the work if it is
+						too large for one useful change. Finish with actual verification and
+						updated docs.
+					</p>
+					<div class="guide-callout">
+						<p>
+							<strong>The example is illustrative.</strong> It demonstrates
+							documents and handoffs. It does not include an implemented
+							notification app or claim that application checks were run.
+						</p>
+					</div>
+					<p class="section-note">
+						Tickets can stay as local Markdown. A connected tracker is optional;
+						publishing work to it needs an explicit request.
+					</p>
+				</section>
+				<section id="questions" class="guide-section">
+					<h2>A few useful answers.</h2>
+					<details>
+						<summary>Do I need every step for every change?</summary>
+						<p>
+							No. A small fix may only need relevant context, a clear outcome,
+							and focused checks. Use the fuller planning and ticket workflow
+							when it reduces uncertainty or helps divide the work.
+						</p>
+					</details>
+					<details>
+						<summary>Will these skills work in my coding agent?</summary>
+						<p>
+							The files follow the open Agent Skills format. Discovery paths,
+							invocation syntax, and available tools differ by client. These
+							templates avoid client-specific tool bindings, but you should
+							verify them in your own setup.
+						</p>
+					</details>
+					<details>
+						<summary>
+							Are these the same as third-party planning skills?
+						</summary>
+						<p>
+							No. They are original, deliberately small templates for this kit.
+							You can use your existing planning, spec, ticket, and review
+							skills instead. The workflow matters more than the names.
+						</p>
+					</details>
+					<details>
+						<summary>Can I use the kit for commercial work?</summary>
+						<p>
+							Yes. The original kit materials use the{" "}
+							<a href="/starter-kit/LICENSE.txt">MIT license</a>, including its
+							attribution notice. External tools and third-party skills have
+							their own licenses.
+						</p>
+					</details>
+					<details id="legacy">
+						<summary>Where is the original Spec Architect agent?</summary>
+						<p>
+							The{" "}
+							<a href="/downloads/spec-architect.md" download>
+								original Claude Code agent
+							</a>{" "}
+							is still available as a legacy download. It uses the earlier
+							single-agent workflow; the new kit provides a broader set of
+							context, implementation, and verification templates.
+						</p>
+					</details>
+					<div class="download-secondary">
+						<a
+							class="button"
+							href="/downloads/build-with-specs-starter-kit-v1.zip"
+							download
+						>
+							Download the starter kit{" "}
+							<svg
+								viewBox="0 0 24 24"
+								width="18"
+								height="18"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.6"
+								aria-hidden="true"
+							>
+								<path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5" />
+							</svg>
+						</a>
+					</div>
+				</section>
+			</div>
+		</div>
+	</main>
+	<Footer />
+</Layout>

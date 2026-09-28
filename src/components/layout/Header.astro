@@ -1,92 +1,30 @@
 ---
-import Logo from '../common/Logo.astro';
-import Button from '../common/Button.astro';
+import Logo from "../common/Logo.astro";
 ---
 
-<header class="header">
-	<div class="container">
-		<div class="header-content">
-			<a href="/" class="logo">
-				<Logo width="36" height="36" />
-				<span class="logo-text">Build with Specs</span>
-			</a>
-
-			<nav class="nav">
-				<a href="#what-is-sdd" class="nav-link">Overview</a>
-				<a href="#how-to-start" class="nav-link">Guide</a>
-				<Button href="#download" variant="secondary" size="md">Download</Button>
-			</nav>
-		</div>
-	</div>
+<header class="site-header wrap">
+	<a class="brand" href="/" aria-label="Build with Specs home">
+		<span class="brand-mark">
+			<Logo width="25" height="29" />
+		</span>
+		Build with Specs<span class="brand-period">.</span>
+	</a>
+	<nav aria-label="Main navigation">
+		<a href="/#workflow">The workflow</a>
+		<a href="/#skills">The skills</a>
+		<a class="nav-cta" href="/start">
+			Get the starter kit{" "}
+			<svg
+				viewBox="0 0 24 24"
+				width="16"
+				height="16"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="1.6"
+				aria-hidden="true"
+			>
+				<path d="M5 12h14m-6-6 6 6-6 6" />
+			</svg>
+		</a>
+	</nav>
 </header>
-
-<style>
-	.header {
-		background: var(--color-pastel-purple);
-		border-bottom: var(--border-width) solid var(--color-border);
-		position: sticky;
-		top: 0;
-		z-index: 100;
-		backdrop-filter: blur(10px);
-	}
-
-	.header-content {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding: var(--space-4) 0;
-	}
-
-	.logo {
-		display: flex;
-		align-items: center;
-		gap: var(--space-3);
-		font-size: var(--text-xl);
-		font-weight: 900;
-		color: var(--color-gray-900);
-		text-decoration: none;
-		letter-spacing: -0.02em;
-		transition: transform var(--transition-fast);
-	}
-
-	.logo:hover {
-		transform: translateY(-2px);
-	}
-
-	.logo:hover .logo-text {
-		color: var(--color-primary);
-	}
-
-	.logo svg {
-		color: var(--color-primary);
-	}
-
-	.nav {
-		display: flex;
-		align-items: center;
-		gap: var(--space-6);
-	}
-
-	.nav-link {
-		font-size: var(--text-base);
-		font-weight: 600;
-		color: var(--color-gray-900);
-		text-decoration: none;
-		transition: color var(--transition-fast);
-	}
-
-	.nav-link:hover {
-		color: var(--color-primary);
-	}
-
-	/* Responsive */
-	@media (max-width: 768px) {
-		.nav-link {
-			display: none;
-		}
-
-		.logo {
-			font-size: var(--text-lg);
-		}
-	}
-</style>

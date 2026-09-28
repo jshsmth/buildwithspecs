@@ -1,52 +1,33 @@
-# BuildWithSpecs
+# Build with Specs
 
-BuildWithSpecs is a free methodology and toolset for building better software with AI assistance through **Spec-Driven Development**.
+A practical field guide for developers adopting an agent workflow: project context, planning, specifications, tickets, implementation, and verification.
 
-## What is Spec-Driven Development?
+The Astro site includes a six-stage interactive example, a skills catalogue, and a setup guide with a downloadable starter kit. The example is illustrative; it is not an implemented application or evidence of performed checks.
 
-Spec-Driven Development is a structured approach to software development that puts planning first. Instead of jumping straight into coding with AI tools and dealing with unclear requirements and constant rewrites, you create a detailed specification before any code is written.
+## Develop
 
-Think of it like building a house - you wouldn't start construction without blueprints. Similarly, you shouldn't start coding without a clear plan.
+```sh
+npm ci
+npm run dev
+```
 
-## The Problem We Solve
+## Build
 
-When working with AI coding assistants, many developers face:
+```sh
+npm run build
+npm run preview
+```
 
-- **Unclear requirements** that lead to building the wrong thing
-- **Scope creep** where projects grow beyond their original intent
-- **Constant rewrites** because the AI didn't understand what you wanted
-- **Team misalignment** where everyone has a different vision
+The existing Vercel adapter remains configured. Neither a local build nor a preview deploys the site.
 
-## How It Works
+## Starter kit
 
-Spec-Driven Development follows a simple 4-step process:
+Edit the original materials in `starter-kit/`. `npm run kit` publishes readable copies under `public/starter-kit/` and generates `public/downloads/build-with-specs-starter-kit-v1.zip`. Development and production builds run this automatically. Generated copies are ignored by Git.
 
-1. **Requirements** - Define your goals and project scope clearly
-2. **Design** - Plan your architecture and how components will work together
-3. **Tasks** - Break down the work into manageable pieces
-4. **Build** - Let AI implement your well-defined specification
+The kit uses the included MIT license. It contains original skill templates, repository context seeds, work templates, and a worked example. The workflow is tool-independent. Plasma Wiki is an optional indexing example; its setup and agent compatibility references are documented in the kit.
 
-By spending time on steps 1-3, step 4 becomes dramatically faster and more accurate.
+The original `public/downloads/spec-architect.md` remains available as a legacy download.
 
-## What You Get
+## Design
 
-- **10x faster planning** - Structured templates guide you through the planning process
-- **85% fewer rewrites** - Clear specs mean AI builds it right the first time
-- **100% team aligned** - Everyone works from the same specification document
-
-## Getting Started
-
-Download the free Spec Architect agent for Claude Code - it's a 29KB file that guides you through creating professional specifications for your projects. No signup required, completely free to use.
-
-Visit [buildwithspecs.com](https://buildwithspecs.com) to learn more and download the agent.
-
-## Who Is This For?
-
-- Developers using AI coding assistants who want better results
-- Teams that need to align on project direction before coding
-- Anyone tired of unclear requirements leading to wasted development time
-- People who want to work smarter with AI, not harder
-
-## Philosophy
-
-This is a free and open methodology. We believe better planning leads to better software, and everyone should have access to these practices. Spec-Driven Development works with any AI coding tool and any programming language.
+`PRODUCT.md` records product scope. `DESIGN.md` records the implemented system. The homepage direction and interaction contract live in `.impeccable/surfaces/`. Fonts are self-hosted; licenses and sources live in `public/fonts/`.
