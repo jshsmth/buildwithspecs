@@ -127,7 +127,7 @@ Generous outer spacing surrounds compact working material. Fine rules, unboxed r
 - Paper surfaces, fine rules, and restrained violet emphasis.
 - Inspectable documents with accessible, progressively enhanced interactions.
 
-This is the implemented system for the home and setup pages. `src/styles/site.css` is the implementation source; the frontmatter records its reusable values. The sidecar's synthesized tonal ramps are palette previews, not additional shipping tokens.
+This is the implemented system for the home and setup pages. `src/styles/site.css` is the ordered entry point for the styles in `src/styles/`; the frontmatter records its reusable values. The sidecar's synthesized tonal ramps are palette previews, not additional shipping tokens.
 
 ## Colors
 

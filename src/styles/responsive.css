@@ -1,0 +1,440 @@
+@keyframes page-settle {
+	from {
+		opacity: 0.65;
+		transform: translateY(4px);
+		filter: blur(1px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+		filter: blur(0);
+	}
+}
+@media (min-width: 1600px) {
+	.hero {
+		padding-top: 90px;
+		padding-bottom: 78px;
+	}
+}
+@media (max-width: 1000px) {
+	:root {
+		--gutter: 28px;
+	}
+	.hero-aside {
+		min-width: 230px;
+	}
+	.stage-nav a {
+		gap: 8px;
+		padding-inline: 10px;
+	}
+	.stage-nav a svg {
+		width: 14px;
+	}
+	.stage-panel {
+		gap: 30px;
+		grid-template-columns: 1fr 1.4fr;
+	}
+	.workbench {
+		padding: 24px;
+	}
+	.artifact-body {
+		padding: 22px;
+	}
+	.artifact-rows > div {
+		grid-template-columns: 100px 1fr;
+		gap: 12px;
+	}
+	.section-heading {
+		gap: 44px;
+	}
+	.context-grid {
+		gap: 40px;
+	}
+	.verification-section {
+		gap: 44px;
+	}
+	.skill-row summary {
+		grid-template-columns: 100px 1fr 150px 20px;
+		gap: 18px;
+	}
+	.skill-details {
+		padding-left: 118px;
+	}
+	.guide-layout {
+		grid-template-columns: 170px 1fr;
+		gap: 35px;
+	}
+}
+@media (max-width: 760px) {
+	:root {
+		--gutter: 22px;
+	}
+	.site-header {
+		min-height: 82px;
+		gap: 16px;
+	}
+	.brand {
+		font-size: 17px;
+		gap: 7px;
+	}
+	.brand-period {
+		margin-left: -7px;
+	}
+	.brand-mark svg {
+		width: 22px;
+	}
+	.site-header nav {
+		gap: 0;
+	}
+	.site-header nav > a:not(.nav-cta) {
+		display: none;
+	}
+	.site-header nav .nav-cta {
+		font-size: 12px;
+		gap: 6px;
+	}
+	.nav-cta svg {
+		width: 14px;
+	}
+	.hero {
+		padding-top: 47px;
+		padding-bottom: 46px;
+	}
+	.hero h1 {
+		font-size: clamp(45px, 8.3vw, 62px);
+		letter-spacing: -0.03em;
+	}
+	.hero-bottom {
+		margin-top: 22px;
+		display: block;
+	}
+	.hero-description {
+		font-size: 15px;
+		max-width: 520px;
+	}
+	.hero-aside {
+		display: none;
+	}
+	.hero-actions {
+		gap: 22px;
+		margin-top: 23px;
+	}
+	.button {
+		padding: 13px 18px;
+		font-size: 12px;
+		gap: 16px;
+	}
+	.hero-actions .text-link {
+		font-size: 12px;
+	}
+	.section-intro {
+		display: block;
+		margin-bottom: 20px;
+	}
+	.section-intro h2 {
+		font-size: 16px;
+		margin-bottom: 8px;
+	}
+	.section-intro p {
+		font-size: 12px;
+		max-width: 380px;
+	}
+	.example-label {
+		display: inline;
+		margin-left: 4px;
+	}
+	.stage-nav {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.stage-nav a {
+		font-size: 12px;
+		padding: 14px 10px;
+	}
+	.stage-nav a svg {
+		display: none;
+	}
+	.stage-number {
+		font-size: 12px;
+	}
+	.workbench {
+		padding: 20px;
+		margin-top: 12px;
+	}
+	.stage-panel {
+		display: block;
+		min-height: 0;
+	}
+	.stage-copy {
+		padding: 0 0 25px;
+	}
+	.stage-count {
+		margin-bottom: 15px;
+	}
+	.stage-copy h3 {
+		font-size: 32px;
+		max-width: 370px;
+		margin-bottom: 12px;
+	}
+	.stage-copy > p {
+		font-size: 13px;
+	}
+	.stage-copy dl {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+		margin: 18px 0;
+	}
+	.stage-copy > .text-link {
+		font-size: 12px;
+	}
+	.artifact-bar {
+		padding: 11px 16px;
+		gap: 7px;
+	}
+	.artifact-type {
+		display: none;
+	}
+	.artifact-body {
+		padding: 22px 18px;
+	}
+	.artifact h4 {
+		font-size: 16px;
+	}
+	.artifact-rows > div {
+		grid-template-columns: 1fr;
+		gap: 6px;
+	}
+	.artifact-rows dt {
+		font-size: 12px;
+	}
+	.artifact-rows dd {
+		font-size: 14px;
+	}
+	.artifact-body > p {
+		font-size: 14px;
+	}
+	.artifact pre {
+		padding: 12px;
+	}
+	.artifact pre code {
+		font-size: 12px;
+	}
+	.workflow-footnote {
+		font-size: 12px;
+		max-width: 300px;
+		margin-inline: auto;
+	}
+	.section-space {
+		padding-block: 64px;
+	}
+	.section-heading {
+		display: block;
+		margin-bottom: 30px;
+	}
+	.section-heading h2 {
+		font-size: 39px;
+		margin-bottom: 23px;
+	}
+	.section-heading > div {
+		max-width: 520px;
+	}
+	.section-heading p {
+		font-size: 14px;
+		margin-bottom: 12px;
+	}
+	.context-grid {
+		grid-template-columns: 1fr;
+		gap: 34px;
+	}
+	.repo-map {
+		padding: 22px;
+	}
+	.tree-line > span {
+		font-size: 12px;
+	}
+	.tree-line code {
+		font-size: 12px;
+	}
+	.repo-map-header {
+		gap: 10px;
+	}
+	.repo-map-header > span:last-child {
+		font-size: 12px;
+	}
+	.context-explanation h3 {
+		font-size: 31px;
+	}
+	.context-explanation > p {
+		max-width: none;
+	}
+	.skill-row summary {
+		grid-template-columns: 75px 1fr 16px;
+		gap: 14px;
+		padding: 23px 0;
+	}
+	.skill-title {
+		font-size: 24px;
+	}
+	.skill-row summary code {
+		grid-column: 2;
+		grid-row: 2;
+		font-size: 12px;
+		margin-top: -7px;
+	}
+	.expand-icon {
+		grid-column: 3;
+		grid-row: 1;
+	}
+	.skill-category {
+		font-size: 12px;
+	}
+	.skill-details {
+		padding: 0 0 25px 0;
+	}
+	.skill-details dl {
+		gap: 20px;
+	}
+	.section-note {
+		font-size: 12px;
+	}
+	.verification-section {
+		grid-template-columns: 1fr;
+		gap: 34px;
+	}
+	.verification-copy h2 {
+		font-size: 40px;
+	}
+	.verification-copy > p {
+		max-width: none;
+	}
+	.verification-sheet {
+		transform: none;
+		padding: 22px;
+	}
+	.verification-sheet h3 {
+		font-size: 26px;
+	}
+	.closing-section {
+		padding-block: 46px;
+	}
+	.closing-inner {
+		display: block;
+	}
+	.closing-inner h2 {
+		font-size: 37px;
+	}
+	.closing-inner p {
+		font-size: 13px;
+	}
+	.closing-action {
+		align-items: flex-start;
+		margin-top: 28px;
+	}
+	.site-footer {
+		grid-template-columns: 1fr;
+		padding-top: 32px;
+		gap: 24px;
+	}
+	.footer-links {
+		justify-content: flex-start;
+		gap: 12px 22px;
+	}
+	.footer-bottom {
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		gap: 12px 22px;
+		font-size: 12px;
+	}
+	.guide-hero {
+		padding: 36px 0;
+	}
+	.guide-hero h1 {
+		font-size: 50px;
+	}
+	.guide-hero > p {
+		font-size: 15px;
+	}
+	.download-line {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 12px;
+	}
+	.guide-layout {
+		display: block;
+		padding-bottom: 35px;
+	}
+	.guide-nav {
+		position: static;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 12px 20px;
+		padding: 16px 0 24px;
+		font-size: 12px;
+	}
+	.guide-section {
+		padding-block: 32px;
+	}
+	.guide-section h2 {
+		font-size: 32px;
+	}
+	.guide-grid {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+	.contents-list > div {
+		grid-template-columns: 1fr;
+		gap: 5px;
+	}
+	.guide-section pre code {
+		font-size: 12px;
+	}
+}
+@media (max-width: 370px) {
+	:root {
+		--gutter: 16px;
+	}
+	.brand {
+		font-size: 15px;
+	}
+	.site-header nav .nav-cta {
+		font-size: 12px;
+	}
+	.hero h1 {
+		font-size: 42px;
+	}
+	.hero-actions {
+		gap: 14px;
+	}
+	.hero-actions .text-link {
+		font-size: 12px;
+	}
+	.button {
+		gap: 12px;
+		padding-inline: 14px;
+	}
+	.workbench {
+		padding: 14px;
+	}
+	.artifact-rows > div {
+		grid-template-columns: 1fr;
+		gap: 4px;
+	}
+	.skill-row summary {
+		grid-template-columns: 60px 1fr 16px;
+		gap: 12px;
+	}
+	.skill-title {
+		font-size: 22px;
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	:root {
+		scroll-behavior: auto;
+	}
+	*,
+	*::before,
+	*::after {
+		animation: none !important;
+		transition: none !important;
+	}
+}

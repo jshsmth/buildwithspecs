@@ -1,0 +1,149 @@
+/* The setup guide uses the same document grammar as the workbench. */
+.guide-hero {
+	padding: 60px 0 46px;
+	max-width: 850px;
+}
+.breadcrumb {
+	font-size: 12px;
+	color: var(--muted);
+	margin-bottom: 30px;
+	display: inline-block;
+}
+.guide-hero h1 {
+	font-size: clamp(48px, 6vw, 72px);
+	line-height: 1.05;
+	letter-spacing: -0.03em;
+	margin-bottom: 24px;
+}
+.guide-hero > p {
+	font-size: 17px;
+	max-width: 630px;
+}
+.download-line {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	margin-top: 26px;
+}
+.download-line > span {
+	font-size: 12px;
+	color: var(--muted);
+}
+.guide-layout {
+	display: grid;
+	grid-template-columns: 220px 1fr;
+	gap: 64px;
+	padding-bottom: 90px;
+	align-items: start;
+}
+.guide-nav {
+	position: sticky;
+	top: 28px;
+	border-top: 1px solid var(--line);
+	padding-top: 18px;
+	display: flex;
+	flex-direction: column;
+	gap: 13px;
+	font-size: 13px;
+}
+.guide-nav a {
+	text-decoration: none;
+}
+.guide-content {
+	min-width: 0;
+	max-width: 760px;
+}
+.guide-section {
+	padding-block: 40px;
+	border-top: 1px solid var(--line);
+	scroll-margin-top: 24px;
+}
+.guide-section h2 {
+	font-size: 35px;
+	margin-bottom: 22px;
+}
+.guide-section h3 {
+	font-family: var(--sans);
+	font-size: 17px;
+	font-weight: 500;
+	margin: 26px 0 12px;
+}
+.guide-section p,
+.guide-section li {
+	font-size: 14px;
+	color: var(--muted);
+}
+.guide-section p + p {
+	margin-top: 14px;
+}
+.guide-section ul,
+.guide-section ol {
+	padding-left: 20px;
+}
+.guide-section li {
+	padding-left: 5px;
+	margin-bottom: 12px;
+}
+.guide-section strong {
+	color: var(--ink);
+	font-weight: 500;
+}
+.guide-section pre {
+	font-size: 12px;
+}
+.guide-section pre code {
+	font-size: 12px;
+}
+.guide-section details {
+	margin-top: 16px;
+	border-bottom: 1px solid var(--line);
+	padding: 14px 0;
+}
+.guide-section summary {
+	cursor: pointer;
+	font-size: 15px;
+	color: var(--ink);
+}
+.guide-section details p {
+	margin-top: 12px;
+}
+.guide-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 24px;
+}
+.guide-grid h3 {
+	margin-top: 0;
+}
+.guide-callout {
+	padding: 20px;
+	background: var(--lavender);
+	margin-top: 24px;
+}
+.guide-callout p {
+	color: #51435f;
+}
+.contents-list {
+	display: grid;
+	gap: 0;
+	margin: 0;
+}
+.contents-list > div {
+	display: grid;
+	grid-template-columns: 180px 1fr;
+	gap: 20px;
+	padding: 16px 0;
+	border-bottom: 1px solid var(--line);
+}
+.contents-list dt {
+	font-family: var(--mono);
+	font-size: 12px;
+}
+.contents-list dd {
+	margin: 0;
+	font-size: 13px;
+	color: var(--muted);
+}
+.download-secondary {
+	margin-top: 24px;
+}
