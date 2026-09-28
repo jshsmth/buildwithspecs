@@ -1,22 +1,37 @@
 {
-  "name": "buildwithspecs",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "kit": "node scripts/build-starter-kit.mjs",
-    "predev": "npm run kit",
-    "prebuild": "npm run kit"
-  },
-  "dependencies": {
-    "@astrojs/vercel": "^9.0.2",
-    "@vercel/analytics": "^1.6.1",
-    "astro": "^5.16.4"
-  },
-  "devDependencies": {
-    "fflate": "^0.8.3"
-  }
+	"name": "buildwithspecs",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"kit": "node scripts/build-starter-kit.mjs",
+		"predev": "npm run kit",
+		"prebuild": "npm run kit",
+		"check": "astro check && tsc --project tsconfig.tools.json",
+		"test": "node --test tests/workflow.test.ts tests/starter-kit.test.ts",
+		"test:site": "node --test tests/site.test.ts",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"validate": "npm run format:check && npm run check && npm test && npm run build && npm run test:site"
+	},
+	"dependencies": {
+		"@astrojs/vercel": "^9.0.2",
+		"@vercel/analytics": "^1.6.1",
+		"astro": "^5.16.4"
+	},
+	"devDependencies": {
+		"@astrojs/check": "^0.9.10",
+		"@types/node": "^24.19.0",
+		"fflate": "^0.8.3",
+		"linkedom": "^0.18.13",
+		"prettier": "^3.9.9",
+		"prettier-plugin-astro": "^1.1.0",
+		"typescript": "^5.9.3"
+	},
+	"engines": {
+		"node": ">=24 <25"
+	}
 }

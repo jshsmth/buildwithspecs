@@ -1,4 +1,5 @@
 ---
+import { starterKit, starterKitDownload } from "../data/starter-kit";
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
@@ -24,11 +25,7 @@ import Footer from "../components/layout/Footer.astro";
 				the pieces you need to the way you already build.
 			</p>
 			<div class="download-line">
-				<a
-					class="button"
-					href="/downloads/build-with-specs-starter-kit-v1.zip"
-					download
-				>
+				<a class="button" href={starterKitDownload} download>
 					Download the starter kit{" "}
 					<svg
 						viewBox="0 0 24 24"
@@ -42,7 +39,7 @@ import Footer from "../components/layout/Footer.astro";
 						<path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5" />
 					</svg>
 				</a>
-				<span>v1.0.0 · ZIP · MIT licensed · No signup</span>
+				<span>v{starterKit.version} · ZIP · MIT licensed · No signup</span>
 			</div>
 		</section>
 		<div class="guide-layout">
@@ -287,11 +284,7 @@ import Footer from "../components/layout/Footer.astro";
 						</p>
 					</details>
 					<div class="download-secondary">
-						<a
-							class="button"
-							href="/downloads/build-with-specs-starter-kit-v1.zip"
-							download
-						>
+						<a class="button" href={starterKitDownload} download>
 							Download the starter kit{" "}
 							<svg
 								viewBox="0 0 24 24"

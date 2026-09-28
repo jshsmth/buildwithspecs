@@ -1,0 +1,14 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"types": ["node"],
+		"noEmit": true,
+		"allowImportingTsExtensions": true
+	},
+	"include": [
+		"scripts/**/*.ts",
+		"tests/**/*.ts",
+		"src/features/**/*.ts",
+		"src/data/**/*.ts"
+	]
+}

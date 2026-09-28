@@ -1,0 +1,12 @@
+dist/
+.astro/
+.vercel/
+node_modules/
+public/
+.impeccable/
+package-lock.json
+/starter-kit/
+DESIGN.md
+PRODUCT.md
+.claude/
+.vscode/
